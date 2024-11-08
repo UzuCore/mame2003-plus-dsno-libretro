@@ -126,7 +126,7 @@ static struct retro_core_option_v2_definition option_def_skip_disclaimer = {
       { "enabled",  NULL },
       { NULL, NULL },
    },
-   "disabled"
+   "enabled"
 };
 
 static struct retro_core_option_v2_definition option_def_skip_warnings = {
@@ -141,7 +141,7 @@ static struct retro_core_option_v2_definition option_def_skip_warnings = {
       { "enabled",  NULL },
       { NULL, NULL },
    },
-   "disabled"
+   "enabled"
 };
 
 static struct retro_core_option_v2_definition option_def_display_setup = {
@@ -324,7 +324,7 @@ static struct retro_core_option_v2_definition option_def_neogeo_bios = {
       { "asia-aes",  NULL },
       { NULL, NULL },
    },
-   "default"
+   "unibios40"
 };
 
 static struct retro_core_option_v2_definition option_def_stv_bios = {

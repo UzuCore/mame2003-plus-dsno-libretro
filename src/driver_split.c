@@ -773,6 +773,7 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( blktiger )	/*  8/1987 (c) 1987 (US) */
 	DRIVER( bktigerb )	/* bootleg */
 	DRIVER( blkdrgon )	/*  8/1987 (c) 1987 (Japan) */
+	DRIVER( blkdrgnk )	/*  8/1987 (c) 1987 (Korean Translation) */
 	DRIVER( blkdrgonb )	/* bootleg, hacked to say Black Tiger */
 #endif
 

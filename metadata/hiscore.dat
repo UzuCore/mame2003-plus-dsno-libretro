@@ -1042,6 +1042,7 @@ rastsagaa:
 
 knights:
 knightsj:
+knightsk:
 knightsu:
 knightsb:
 knightsja:
@@ -1302,6 +1303,7 @@ kod:
 kodu:
 kodj:
 kodja:
+kodk:
 kodb:
 0:ff9d94:28:00:04
 
@@ -1826,6 +1828,7 @@ spf2t:
 spf2tu:
 spf2xj:
 spf2xjd:
+spf2xk:
 spf2ta:
 spf2th:
 spf2td:
@@ -1834,6 +1837,7 @@ spf2td:
 
 sgemf:
 pfghtj:
+pfghtk:
 sgemfa:
 sgemfd:
 sgemfh:
@@ -1851,18 +1855,21 @@ sfz2ald:
 sfz2h:
 sfz2j:
 sfz2jr1:
+sfz2k:
 sfz2n:
 sfz2aad:
 sfz2al:
 sfz2alb:
 sfz2alh:
 sfz2alj:
+sfz2alk:
 sfz2jd:
 0:ffdf6a:ad:00:01
 
 sfa:
 sfzjr1:
 sfzj:
+sfzk:
 sfau:
 sfar3:
 sfar2:
@@ -2080,6 +2087,7 @@ ddsomar1:
 ddsomr1:
 ddsomjr1:
 ddsomj:
+ddsomk:
 ddsomur1:
 ddsomu:
 ddsomb:
@@ -2096,6 +2104,7 @@ ddtodjr1:
 ddtodj:
 ddtodur1:
 ddtodjr2:
+ddtodk:
 ddtodd:
 ddtoda:
 ddtodar1:
@@ -2114,6 +2123,7 @@ batcir:
 avspu:
 avspa:
 avspj:
+avspk:
 avsp:
 avspd:
 avsph:
@@ -2142,6 +2152,7 @@ fireshrka:
 
 3wonders:
 wonder3:
+wonder3k:
 3wonderu:
 0:ffd0ce:14:ff:36
 0:ffd0f6:50:00:00
@@ -2243,6 +2254,8 @@ wof:
 wofu:
 wofa:
 wofj:
+wofk:
+wofk103:
 wofhfh:
 wofr1:
 wofhfb:
@@ -2267,6 +2280,7 @@ galastrm:
 captcomm:
 captcomu:
 captcomj:
+captcomk:
 captcommb:
 captcommr1:
 captcommjr1:
@@ -2355,6 +2369,10 @@ ffightu1:
 ffighta:
 0:ff850c:3b:ff:50
 0:ff80a0:4:00:00
+
+ffightk:
+0:ff850e:39:85:50
+0:ff80a0:4:00:03
 
 dynwar:
 dynwarj:
@@ -4260,6 +4278,7 @@ pclubysa:
 0:20b515:91:38:64
 
 hookj:
+hookk:
 0:ea6b7:ec:00:4f
 
 bigkong:
@@ -4876,6 +4895,7 @@ sraider:
 
 ginganin:
 ginganina:
+ginganink:
 0:20291:50:00:59
 0:202e1:83:20:09
 0:2011d:3:00:00
@@ -6482,6 +6502,7 @@ bballsa:
 
 tengai:
 tengaij:
+tengaik:
 0:fe4cb0:48:2d:98
 
 blazeon:
@@ -7599,6 +7620,7 @@ waterski:
 0:835b:3:0:0
 
 csclubj:
+csclubk:
 cscluba:
 csclub:
 csclub1:
@@ -7885,6 +7907,7 @@ warriorb:
 0:202b25:1:01:01
 
 rockman2j:
+rockman2k:
 rckman2jregion:
 0:ffefc0:118:00:02
 0:fff047:1:01:01
@@ -8023,6 +8046,7 @@ uccopsu:
 0:e3e9a:49:30:01
 
 uccopsj:
+uccopsk:
 uccopsar:
 0:e3e7c:49:30:01
 
@@ -8447,6 +8471,7 @@ warcadia:
 
 nbbatman:
 leaguemn:
+leaguemk:
 nbbatmanu:
 0:e25d4:4f:00:03
 
@@ -9537,6 +9562,7 @@ bioniccbl:
 0:fec0e7:1:00:00
 
 blkdrgon:
+blkdrgnk:
 blkdrgnb:
 0:e200:50:00:26
 0:e1e0:8:00:00
@@ -9794,6 +9820,7 @@ cworld2j:
 
 dino:
 dinoj:
+dinok:
 dinou:
 dinohunt:
 0:fff03e:310:00:00
@@ -9803,6 +9830,7 @@ ghouls:
 ghoulsu:
 daimakair:
 daimakai:
+daimakaik:
 0:ffbf4c:78:48:a8
 0:ff087a:04:00:00
 
@@ -9814,8 +9842,10 @@ mbombrdj:
 megamana:
 megaman:
 rockmanj:
+rockmank:
 mmancp2u:
 rmancp2j:
+rmancp2k:
 mmancp2ur1:
 0:ffeed0:28:00:00
 0:ffef10:28:00:02
@@ -9853,10 +9883,9 @@ pnickj:
 0:ff8534:04:00:00
 
 punisher:
-punisheru:
-punisherj:
-punisherbz:
-punisherh:
+punishru:
+punishrj:
+punishrk:
 0:ff7896:258:ff:01
 0:ff5b92:004:01:00
 
@@ -9915,8 +9944,18 @@ mbomberj:
 0:ffa138:02:00:10
 0:ffa13a:ae:00:00
 
+strider:
+stridrua:
+striderj:
+stridrja:
+striderk:
+0:ff89aa:78:ff:20
+0:ff0ca4:04:00:00
+
 unsquad:
 area88:
+area88ka:
+area88kb:
 area88r:
 0:ff101c:50:00:26
 0:ff107c:08:00:00
@@ -11043,10 +11082,12 @@ powj:
 gunbird:
 gunbirdj:
 gunbirdk:
+gunbirdka:
 0:fe3dd0:75:00:2d
 
 sngkace:
 sngkacea:
+sngkacek:
 0:fe7d88:9e:00:04
 
 psychic5:
