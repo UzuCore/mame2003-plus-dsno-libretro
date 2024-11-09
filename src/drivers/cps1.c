@@ -8256,7 +8256,6 @@ ROM_START( rockmank )
 	ROM_LOAD( "rcm_19.rom",    0x20000, 0x20000, CRC(f257dbe1) SHA1(967def6b6f93039dbc46373caabeb3301577be75) )
 ROM_END
 
-/* CPS Prototype */
 
 ROM_START( gulunpa )
 	ROM_REGION( CODE_SIZE, REGION_CPU1, 0 )      /* 68000 code */
