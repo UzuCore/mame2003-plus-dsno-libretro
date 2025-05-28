@@ -396,6 +396,7 @@ static UINT16 sound_bank;
 
 static UINT8 misc_io_data[2][0x10];
 
+data8_t  *system32_dpram;
 data16_t *system32_protram;
 data16_t *system32_workram;
 
@@ -908,6 +909,23 @@ static MEMORY_WRITE16_START( multi32_writemem )
 	{ 0xd00000, 0xd0000f, interrupt_control_16_w },
 	{ 0xd80000, 0xdfffff, random_number_16_w },
 	{ 0xf00000, 0xffffff, MWA16_ROM },
+MEMORY_END
+
+
+/****************************************************
+ V25 protection board
+****************************************************/
+
+static MEMORY_READ_START( system32_v25_readmem )
+	{ 0x00000, 0x0ffff, MRA_ROM },
+	{ 0x10000, 0x1ffff, MRA_RAM },
+	{ 0xf0000, 0xfffff, MRA_ROM },
+MEMORY_END
+
+static MEMORY_WRITE_START( system32_v25_writemem )
+	{ 0x00000, 0x0ffff, MWA_ROM },
+	{ 0x10000, 0x1ffff, MWA_RAM, &system32_dpram },
+	{ 0xf0000, 0xfffff, MWA_ROM },
 MEMORY_END
 
 
@@ -2457,14 +2475,15 @@ INPUT_PORTS_END
 struct RF5C68interface sys32_rf5c68_interface =
 {
   RFC_CLOCK/4,
-  55
+  YM3012_VOL(55,MIXER_PAN_LEFT,55,MIXER_PAN_RIGHT)
 };
 
 struct YM2612interface sys32_ym3438_interface =
 {
 	2,		/* 2 chips */
 	MASTER_CLOCK/4,	/* verified on real PCB */
-	{ 40,40 },
+	{ YM3012_VOL(40,MIXER_PAN_LEFT,40,MIXER_PAN_RIGHT),
+	  YM3012_VOL(40,MIXER_PAN_LEFT,40,MIXER_PAN_RIGHT) },
 	{ 0 },	{ 0 },	{ 0 },	{ 0 },
 	{ ym3438_irq_handler }
 };
@@ -2473,7 +2492,8 @@ struct YM2612interface multi32_ym3438_interface =
 {
 	1,
 	MASTER_CLOCK/4,
-	{ 60,60 },
+	{ YM3012_VOL(40,MIXER_PAN_LEFT,40,MIXER_PAN_RIGHT),
+	  YM3012_VOL(40,MIXER_PAN_LEFT,40,MIXER_PAN_RIGHT) },
 	{ 0 },	{ 0 },	{ 0 },	{ 0 },
 	{ ym3438_irq_handler }
 };
@@ -2558,6 +2578,12 @@ static MACHINE_DRIVER_START( vblank32 )
 	MDRV_VBLANK_DURATION(1000000 * (262 - 224) / (262 * 60))
 MACHINE_DRIVER_END
 
+/* V25 protection board */
+static MACHINE_DRIVER_START( system32_v25 )
+	MDRV_IMPORT_FROM(system32)
+	MDRV_CPU_ADD(V20, 10000000) /* 10.000 MHz OSC */
+	MDRV_CPU_MEMORY(system32_v25_readmem,system32_v25_writemem)
+MACHINE_DRIVER_END
 
 static MACHINE_DRIVER_START( multi32 )
 
@@ -2644,7 +2670,7 @@ ROM_START( ga2 )
 	ROM_LOAD( "mpr14943",     0x200000, 0x100000, CRC(24d40333) SHA1(38faf8f3eac317a163e93bd2247fe98189b13d2d) )
 	ROM_LOAD( "mpr14942",     0x300000, 0x100000, CRC(a89b0e90) SHA1(e14c62418eb7f9a2deb2a6dcf635bedc1c73c253) )
 
-	ROM_REGION( 0x10000, REGION_CPU3, 0 ) /* Protection CPU */
+	ROM_REGION( 0x100000, REGION_CPU3, 0 ) /* Protection CPU */
 	ROM_LOAD( "epr14468", 0x00000, 0x10000, CRC(77634daa) SHA1(339169d164b9ed7dc3787b084d33effdc8e9efc1) )
 
 	ROM_REGION( 0x400000, REGION_GFX1, 0 ) /* tiles */
@@ -2675,7 +2701,7 @@ ROM_START( ga2j )
 	ROM_LOAD( "mpr14943",     0x200000, 0x100000, CRC(24d40333) SHA1(38faf8f3eac317a163e93bd2247fe98189b13d2d) )
 	ROM_LOAD( "mpr14942",     0x300000, 0x100000, CRC(a89b0e90) SHA1(e14c62418eb7f9a2deb2a6dcf635bedc1c73c253) )
 
-	ROM_REGION( 0x10000, REGION_CPU3, 0 ) /* Protection CPU */
+	ROM_REGION( 0x100000, REGION_CPU3, 0 ) /* Protection CPU */
 	ROM_LOAD( "epr14468", 0x00000, 0x10000, CRC(77634daa) SHA1(339169d164b9ed7dc3787b084d33effdc8e9efc1) )
 
 	ROM_REGION( 0x400000, REGION_GFX1, 0 ) /* tiles */
@@ -3472,20 +3498,20 @@ static DRIVER_INIT ( alien3 )
 
 static DRIVER_INIT ( brival )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
-
 	system32_protram = auto_malloc (0x1000);
 	install_mem_read16_handler (0, 0x20ba00, 0x20ba07, brival_protection_r);
-	install_mem_write16_handler(0, 0xa000000, 0xa00fff, brival_protboard_w);
+	install_mem_write16_handler(0, 0xa00000, 0xa00fff, brival_protboard_w);
 }
 
 static DRIVER_INIT ( ga2 )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
-
-	/* Protection - the game expects a string from a RAM area shared with the protection device */
-	install_mem_read16_handler (0, 0xa00000, 0xa0001f, ga2_sprite_protection_r); /* main sprite colours */
+	install_mem_read16_handler (0, 0xa00000, 0xa0001f, ga2_sprite_protection_r);
 	install_mem_read16_handler (0, 0xa00100, 0xa0015f, ga2_wakeup_protection_r);
+/* Working with V20 in place of V25 at a slight performance cost.
+	decrypt_ga2_protrom();
+	install_mem_read16_handler (0, 0xa00000, 0xa00fff, system32_dpram_r);
+	install_mem_write16_handler(0, 0xa00000, 0xa00fff, system32_dpram_w);
+*/
 }
 
 /* comms board workaround */
@@ -3508,7 +3534,6 @@ static READ16_HANDLER( dual_pcb_masterslave )
 
 static DRIVER_INIT ( f1sl )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
 	install_io_analog();
 
 	dual_pcb_comms = auto_malloc(0x1000);
@@ -3520,22 +3545,18 @@ static DRIVER_INIT ( f1sl )
 
 static DRIVER_INIT ( arf )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
-
 	install_mem_read16_handler (0, 0xa00000, 0xa000ff, arabfgt_protboard_r);
 	install_mem_read16_handler (0, 0xa00100, 0xa0011f, arf_wakeup_protection_r);
 	install_mem_write16_handler(0, 0xa00000, 0xa00fff, arabfgt_protboard_w);
-}
-
-static DRIVER_INIT ( s32 )
-{
-	system32_use_default_eeprom = EEPROM_SYS32_0;
+/* Not working with V20 in place of V25.
+	decrypt_arabfgt_protrom();
+	install_mem_read16_handler (0, 0xa00000, 0xa00fff, system32_dpram_r);
+	install_mem_write16_handler(0, 0xa00000, 0xa00fff, system32_dpram_w);
+*/
 }
 
 static DRIVER_INIT ( sonic )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
-
 	install_mem_write16_handler(0, 0xc00040, 0xc00055, sonic_track_reset_w);
 	install_mem_read16_handler (0, 0xc00040, 0xc00055, sonic_track_r);
 
@@ -3544,8 +3565,6 @@ static DRIVER_INIT ( sonic )
 
 static DRIVER_INIT ( sonicp )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
-
 	install_mem_write16_handler(0, 0xc00040, 0xc00055, sonic_track_reset_w);
 	install_mem_read16_handler (0, 0xc00040, 0xc00055, sonic_track_r);
 }
@@ -3566,7 +3585,6 @@ static DRIVER_INIT ( radr )
 
 static DRIVER_INIT ( f1en )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
 	install_io_analog();
 }
 
@@ -3592,10 +3610,9 @@ static READ16_HANDLER( arescue_81000f_r )
 
 static DRIVER_INIT( arescue )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
 	install_io_analog();
 
-	install_mem_read16_handler (0, 0xa00000, 0xa00006, arescue_dsp_r);  		/* protection*/
+	install_mem_read16_handler (0, 0xa00000, 0xa00006, arescue_dsp_r); /* protection */
 	install_mem_write16_handler(0, 0xa00000, 0xa00006, arescue_dsp_w);
 
 	dual_pcb_comms = auto_malloc(0x2000);
@@ -3603,15 +3620,12 @@ static DRIVER_INIT( arescue )
 	install_mem_write16_handler(0, 0x810000, 0x810fff, dual_pcb_comms_w);
 	install_mem_read16_handler (0, 0x818000, 0x818003, dual_pcb_masterslave);
 
-	install_mem_read16_handler (0, 0x810001, 0x810001, arescue_handshake_r); /*  handshake*/
-	install_mem_read16_handler (0, 0x81000f, 0x81000f, arescue_81000f_r);	/*  1player game*/
+	install_mem_read16_handler (0, 0x810001, 0x810001, arescue_handshake_r); /* handshake */
+	install_mem_read16_handler (0, 0x81000f, 0x81000f, arescue_81000f_r);	/* 1player game */
 }
 
 static DRIVER_INIT( darkedge )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
-
-	/* install protection handlers */
 	install_mem_read16_handler (0, 0xa00000, 0xa7ffff, darkedge_protection_r);
 	install_mem_write16_handler(0, 0xa00000, 0xa7ffff, darkedge_protection_w);
 	system32_prot_vblank = darkedge_fd1149_vblank;
@@ -3621,15 +3635,11 @@ static DRIVER_INIT( darkedge )
 
 static DRIVER_INIT( jleague )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
 	install_mem_write16_handler(0, 0x20F700, 0x20F705, jleague_protection_w);
 }
 
 static DRIVER_INIT( dbzvrvs )
 {
-	system32_use_default_eeprom = EEPROM_SYS32_0;
-
-	/* install protection handlers */
 	install_mem_read16_handler (0, 0xa00000, 0xa7ffff, dbzvrvs_protection_r);
 	install_mem_write16_handler(0, 0xa00000, 0xa7ffff, dbzvrvs_protection_w);
 }
@@ -3646,36 +3656,36 @@ static DRIVER_INIT( scross )
 }
 
 /* this one is pretty much ok since it doesn't use backgrounds tilemaps */
-GAME( 1992, holo,     0,        system32, holo,     s32,      ORIENTATION_FLIP_Y, "Sega", "Holosseum" )
+GAME( 1992, holo,     0,        system32,     holo,     0,        ORIENTATION_FLIP_Y, "Sega", "Holosseum" )
 
 /* these have a range of issues, mainly with the backgrounds */
-GAMEX(1992, arescue,  0,        system32, arescue,  arescue,  ROT0, "Sega", "Air Rescue", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1991, radm,     0,        system32, radm,     radm,     ROT0, "Sega", "Rad Mobile", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1991, radr,     0,        system32, radr,     radr,     ROT0, "Sega", "Rad Rally", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1991, spidey,   0,        system32, spidey,   s32,      ROT0, "Sega", "Spider-Man: The Videogame (US)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1991, spideyj,  spidey,   system32, spideyj,  s32,      ROT0, "Sega", "Spider-Man: The Videogame (World)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1991, f1en,     0,        system32, f1en,     f1en,     ROT0, "Sega", "F1 Exhaust Note", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1992, arabfgt,  0,        system32, spidey,   arf,      ROT0, "Sega", "Arabian Fight", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1992, ga2,      0,        system32, ga2,      ga2,      ROT0, "Sega", "Golden Axe - The Revenge of Death Adder (US)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1992, ga2j,     ga2,      system32, ga2j,     ga2,      ROT0, "Sega", "Golden Axe - The Revenge of Death Adder (Japan)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1992, brival,   0,        system32, brival,   brival,   ROT0, "Sega", "Burning Rival (Japan)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1992, sonic,    0,        system32, sonic,    sonic,    ROT0, "Sega", "Segasonic the Hedgehog (Japan rev. C)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1992, sonicp,   sonic,    system32, sonic,    sonicp,   ROT0, "Sega", "Segasonic the Hedgehog (Japan prototype)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1993, alien3,   0,        vblank32, alien3,   alien3,   ROT0, "Sega", "Alien3: The Gun", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1994, jpark,    0,        system32, jpark,    jpark,    ROT0, "Sega", "Jurassic Park", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1994, svf,      0,        system32, svf,      s32,      ROT0, "Sega", "Super Visual Football - European Sega Cup", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1994, svs,      svf,      system32, svf,      s32,      ROT0, "Sega", "Super Visual Soccer - Sega Cup (US)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1994, jleague,  svf,      system32, svf,      jleague,  ROT0, "Sega", "The J.League 1994 (Japan)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1993, f1lap,    0,        system32, f1lap,    f1sl,     ROT0, "Sega", "F1 Super Lap (World)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1993, f1lapj,   f1lap,    system32, f1lap,    f1sl,     ROT0, "Sega", "F1 Super Lap (Japan)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1993, darkedge, 0,        system32, darkedge, darkedge, ROT0, "Sega", "Dark Edge", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1994, dbzvrvs,  0,        system32, system32, dbzvrvs,  ROT0, "Sega / Banpresto", "Dragon Ball Z V.R.V.S.", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1995, slipstrm, 0,        system32, slipstrm, f1en,     ROT0, "Capcom", "Slipstream (Brazil)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1995, slipstrh, slipstrm, system32, slipstrm, f1en,     ROT0, "Capcom", "Slipstream (Hispanic)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, arescue,  0,        system32,     arescue,  arescue,  ROT0, "Sega", "Air Rescue", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1991, radm,     0,        system32,     radm,     radm,     ROT0, "Sega", "Rad Mobile", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1991, radr,     0,        system32,     radr,     radr,     ROT0, "Sega", "Rad Rally", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1991, spidey,   0,        system32,     spidey,   0,        ROT0, "Sega", "Spider-Man: The Videogame (US)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1991, spideyj,  spidey,   system32,     spideyj,  0,        ROT0, "Sega", "Spider-Man: The Videogame (World)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1991, f1en,     0,        system32,     f1en,     f1en,     ROT0, "Sega", "F1 Exhaust Note", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, arabfgt,  0,        system32,     spidey,   arf,      ROT0, "Sega", "Arabian Fight", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, ga2,      0,        system32,     ga2,      ga2,      ROT0, "Sega", "Golden Axe - The Revenge of Death Adder (US)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, ga2j,     ga2,      system32,     ga2j,     ga2,      ROT0, "Sega", "Golden Axe - The Revenge of Death Adder (Japan)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, brival,   0,        system32,     brival,   brival,   ROT0, "Sega", "Burning Rival (Japan)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, sonic,    0,        system32,     sonic,    sonic,    ROT0, "Sega", "Segasonic the Hedgehog (Japan rev. C)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, sonicp,   sonic,    system32,     sonic,    sonicp,   ROT0, "Sega", "Segasonic the Hedgehog (Japan prototype)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1993, alien3,   0,        vblank32,     alien3,   alien3,   ROT0, "Sega", "Alien3: The Gun", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1994, jpark,    0,        system32,     jpark,    jpark,    ROT0, "Sega", "Jurassic Park", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1994, svf,      0,        system32,     svf,      0,        ROT0, "Sega", "Super Visual Football - European Sega Cup", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1994, svs,      svf,      system32,     svf,      0,        ROT0, "Sega", "Super Visual Soccer - Sega Cup (US)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1994, jleague,  svf,      system32,     svf,      jleague,  ROT0, "Sega", "The J.League 1994 (Japan)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1993, f1lap,    0,        system32,     f1lap,    f1sl,     ROT0, "Sega", "F1 Super Lap (World)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1993, f1lapj,   f1lap,    system32,     f1lap,    f1sl,     ROT0, "Sega", "F1 Super Lap (Japan)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1993, darkedge, 0,        system32,     darkedge, darkedge, ROT0, "Sega", "Dark Edge", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1994, dbzvrvs,  0,        system32,     system32, dbzvrvs,  ROT0, "Sega / Banpresto", "Dragon Ball Z V.R.V.S.", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1995, slipstrm, 0,        system32,     slipstrm, f1en,     ROT0, "Capcom", "Slipstream (Brazil)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1995, slipstrh, slipstrm, system32,     slipstrm, f1en,     ROT0, "Capcom", "Slipstream (Hispanic)", GAME_IMPERFECT_GRAPHICS )
 
 /* Multi32 games */
-GAMEX(1992, orunners, 0,        multi32,  orunners, 0,        ROT0, "Sega", "Outrunners (US)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1994, harddunk, 0,        multi32,  harddunk, 0,        ROT0, "Sega", "Hard Dunk (World)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1994, harddunj, harddunk, multi32,  harddunk, 0,        ROT0, "Sega", "Hard Dunk (Japan)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1992, scross,   0,        multi32,  scross,   scross,   ROT0, "Sega", "Stadium Cross (World)", GAME_IMPERFECT_GRAPHICS )
-GAMEX(1992, titlef,   0,        multi32,  titlef,   titlef,   ROT0, "Sega", "Title Fight (World)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, orunners, 0,        multi32,      orunners, 0,        ROT0, "Sega", "Outrunners (US)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1994, harddunk, 0,        multi32,      harddunk, 0,        ROT0, "Sega", "Hard Dunk (World)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1994, harddunj, harddunk, multi32,      harddunk, 0,        ROT0, "Sega", "Hard Dunk (Japan)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, scross,   0,        multi32,      scross,   scross,   ROT0, "Sega", "Stadium Cross (World)", GAME_IMPERFECT_GRAPHICS )
+GAMEX(1992, titlef,   0,        multi32,      titlef,   titlef,   ROT0, "Sega", "Title Fight (World)", GAME_IMPERFECT_GRAPHICS )

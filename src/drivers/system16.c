@@ -151,6 +151,7 @@ Notes:
 #include "cpu/i8039/i8039.h"
 #include "system16.h"
 #include "machine/fd1089.h"
+#include "ost_samples.h"
 extern void mc8123_decrypt_0066(void);
 
 /***************************************************************************/
@@ -410,8 +411,16 @@ PORT_END
 
 static WRITE16_HANDLER( sound_command_w ){
 	if( ACCESSING_LSB ){
-		soundlatch_w( 0,data&0xff );
-		cpu_set_irq_line( 1, 0, HOLD_LINE );
+		if( ost_support_enabled(OST_SUPPORT_SHINOBI) ) {
+			if(generate_ost_sound( data )) {
+				soundlatch_w( 0,data&0xff );
+				cpu_set_irq_line( 1, 0, HOLD_LINE );
+			}
+		}
+		else {
+			soundlatch_w( 0,data&0xff );
+			cpu_set_irq_line( 1, 0, HOLD_LINE );
+		}
 	}
 }
 
@@ -3941,6 +3950,7 @@ ROM_START( passshtb )
 	ROM_LOAD( "epr11860.a10", 0x20000, 0x08000, CRC(10263746) SHA1(1f981fb185c6a9795208ecdcfba36cf892a99ed5) )
 	ROM_LOAD( "epr11861.a11", 0x28000, 0x08000, CRC(38b54a71) SHA1(68ec4ef5b115844214ff2213be1ce6678904fbd2) )
 ROM_END
+
 /***************************************************************************/
 
 static MEMORY_READ16_START( passsht_readmem )
@@ -5176,6 +5186,8 @@ static MACHINE_DRIVER_START( shinobi )
 	MDRV_CPU_MEMORY(shinobi_readmem,shinobi_writemem)
 
 	MDRV_MACHINE_INIT(shinobi)
+
+	MDRV_INSTALL_OST_SUPPORT(OST_SUPPORT_SHINOBI)
 MACHINE_DRIVER_END
 
 /***************************************************************************/

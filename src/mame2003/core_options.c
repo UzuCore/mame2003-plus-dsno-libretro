@@ -52,7 +52,7 @@ static struct retro_core_option_v2_definition option_def_four_way_emulation = {
    APPNAME"_four_way_emulation",
    "4-Way Joystick Emulation on 8-Way Joysticks",
    NULL,
-   "Improves issues with hitting diagonals when playing 4-way games.",
+   "Emulates a joystick restricted to 4-way movement in 4-way games, either by ignoring diagonals altogether or simulating a joystick rotated by 45 degrees (in games like Q*bert).",
    NULL,
    "cat_key_input",
    {
@@ -897,7 +897,7 @@ void init_core_options(void)
 
 static void set_variables(void)
 {
-  static unsigned effective_options_count;         /* the number of core options in effect for the current content */
+  unsigned effective_options_count = 0;         /* the number of core options in effect for the current content */
   int option_index   = 0;
 
   for(option_index = 0; option_index < (OPT_end + 1); option_index++)
@@ -1200,8 +1200,6 @@ void update_variables(bool first_time)
 
           if(first_time)
             save_protection = options.mame_remapping;
-          else
-            setup_menu_init();
           break;
 
         case OPT_FRAMESKIP:
@@ -1294,6 +1292,9 @@ void update_variables(bool first_time)
   environ_cb(RETRO_ENVIRONMENT_GET_LED_INTERFACE, &ledintf);
   led_state_cb = ledintf.set_led_state;
 
+  if(!first_time) /* update mame menu */
+    setup_menu_init();
+  
   if(reset_control_descriptions) /* one of the option changes has flagged a need to re-describe the controls */
   {
     retro_describe_controls();

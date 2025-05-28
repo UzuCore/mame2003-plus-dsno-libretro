@@ -129,12 +129,15 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( vanvank )	/* (c) 1983 Karateco (bootleg?) */
 	DRIVER( alibaba )	/* (c) 1982 Sega */
 	DRIVER( alibabab )	/* (c) 1982 Sega (bootleg) */
-	DRIVER( pengo )		/* 834-0386 (c) 1982 Sega */
-	DRIVER( pengo2 )	/* 834-0386 (c) 1982 Sega */
-	DRIVER( pengo2u )	/* 834-0386 (c) 1982 Sega */
-	DRIVER( pengo3u )	/* 834-0386 (c) 1982 Sega */
-	DRIVER( pengob )	/* bootleg */
-	DRIVER( penta )		/* bootleg */
+	DRIVER( pengo )
+	DRIVER( pengoa )
+	DRIVER( pengob )
+	DRIVER( pengoc )
+	DRIVER( pengoj )
+	DRIVER( pengoja )
+	DRIVER( pengojb )
+	DRIVER( pengojbl )
+	DRIVER( penta)
 	DRIVER( jrpacman )	/* (c) 1983 Midway */
 	DRIVER( jrpacmnf )	/* hack */
 	DRIVER( jumpshot )	/* (c) 1985 Bally Midway */
@@ -1427,6 +1430,7 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( flstoryj )	/* A45 (c) 1985 Taito Corporation (Japan) */
 	DRIVER( onna34ro )	/* A52 (c) 1985 Taito Corporation (Japan) */
 	DRIVER( onna34ra )	/* A52 (c) 1985 Taito Corporation (Japan) */
+	DRIVER( victnine )	/* A16 (c) 1985 Taito Corporation (Japan) */
 	DRIVER( rumba )	    /* ??? (c) 1984 Taito Corporation (Japan) */
 	DRIVER( gladiatr )	/* ??? (c) 1986 Taito America Corporation (US) */
 	DRIVER( ogonsiro )	/* ??? (c) 1986 Taito Corporation (Japan) */
@@ -1608,6 +1612,7 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( ryujin )	/* ??? (c) 1993 Taito Corporation (Japan) */
 	DRIVER( qzshowby )	/* D72 (c) 1993 Taito Corporation (Japan) */
 	DRIVER( pbobble )	/* ??? (c) 1994 Taito Corporation (Japan) */
+	DRIVER( bublbust )	/* ??? (c) 1994 Taito Corporation (US) */
 	DRIVER( spacedx )	/* D89 (c) 1994 Taito Corporation (US) */
 	DRIVER( spacedxj )	/* D89 (c) 1994 Taito Corporation (Japan) */
 	DRIVER( spacedxo )	/* D89 (c) 1994 Taito Corporation (Japan) */
@@ -3047,6 +3052,7 @@ DokiDoki Penguin Land *not confirmed
 	DRIVER( astormbl )	/* bootleg */
 	DRIVER( atomicp )	/* (c) 1990 Philko */
 	DRIVER( snapper )	/* (c) 1990 Philko */
+	DRIVER( dfjail )	/* (c) 1991 Philko */
 	DRIVER( aurail )	/* (c) 1990 Sega / Westone */
 	DRIVER( aurail1d )	/* (c) 1990 Sega / Westone */
 	DRIVER( aurailjd )	/* (c) 1990 Sega / Westone */
@@ -3104,7 +3110,8 @@ DokiDoki Penguin Land *not confirmed
 	DRIVER( wb3bl )		/* (c) 1988 Sega / Westone (but bootleg) */
 	DRIVER( wrestwar )	/* (c) 1989 */
 	DRIVER( fantzn2x )	/* (c) 2008 */
-
+	DRIVER( cencourt )  /* (c) 1988 */
+	DRIVER( passshtjd )  /* (c) 1988 */
 /*
 Sega System 24 game list
 Apr.1988 Hot Rod
@@ -3573,6 +3580,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( rohga )		/* MAM (c) 1991 Data East Corporation (Asia/Euro) */
 	DRIVER( rohgah )	/* MAM (c) 1991 Data East Corporation (Hong Kong) */
 	DRIVER( rohgau )	/* MAM (c) 1991 Data East Corporation (US) */
+	DRIVER( wolffang ) /* MAM (c) 1991 Data East Corporation (Japan) */
 	DRIVER( captaven )	/* MAN (c) 1991 Data East Corporation (Asia) */
 	DRIVER( captavna )	/* MAN (c) 1991 Data East Corporation (Asia) */
 	DRIVER( captavne )	/* MAN (c) 1991 Data East Corporation (UK) */
@@ -6158,6 +6166,8 @@ Other Sun games
 	DRIVER( xeno )          /* (c) 2019 Bitmap Bureau */
 	DRIVER( hypernoid )     /* 2021 M.Priewe */
 	DRIVER( cyborgforce )   /* (c) 2023 Neo Byte Force Ltd */
+	DRIVER( captainbarrel ) /* (c) 2024 Neo Byte Force Ltd */
+  DRIVER( gladmort )      /* (c) 2024 Pixelheart / ChipsOnSteroids */
 
 	/* SemiCom 68020 based hardware */
 	DRIVER( baryon )    /* (c) 1997 SemiCom / Tirano */

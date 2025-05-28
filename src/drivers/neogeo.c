@@ -8325,6 +8325,51 @@ ROM_START( knightsch )
 	ROM_LOAD16_BYTE( "340.c2", 0x000001, 0x400000, CRC(782437cb) SHA1(30bf0362663a42c1069f67ee65f49d19d2c695ec) )
 ROM_END
 
+/* Captain Barrel
+  Neo Byte Force Ltd
+*/
+
+ROM_START( captainbarrel )
+    ROM_REGION( 0x200000, REGION_CPU1, 0 )
+    ROM_LOAD16_WORD_SWAP( "captain-p1.bin", 0x000000, 0x100000, CRC(6da1737d) SHA1(49c8dafb1448bcbf706fcb5b3e713119d421d964) )
+    ROM_LOAD16_WORD_SWAP( "captain-p2.bin", 0x100000, 0x100000, CRC(f6f90237) SHA1(c92b2ab39a2d01cd7c83ececa72dda0a50f429d0) )
+
+    NEO_SFIX_128K( "captain-s1.bin", CRC(9785df9c) SHA1(e07bfa3f729a0b9ce8daff3c6bc0367fd7ce1a2c) )
+
+    NEO_BIOS_SOUND_64K( "captain-m1.bin", CRC(ed6260d2) SHA1(4aea38615117ea96b5e744ce49dd0578ca39a501) )
+
+    ROM_REGION( 0x1000000, REGION_SOUND1, ROMREGION_SOUNDONLY )
+    ROM_LOAD( "captain-v1.bin", 0x000000, 0x800000, CRC(8cfcceb7) SHA1(6657b89d0b0cf6b27ec6cd051eb73d83efa025a2) )
+    ROM_LOAD( "captain-v2.bin", 0x800000, 0x800000, CRC(d1080962) SHA1(e017e5211c2701ee454ea28bba87b05ccc385c11) )
+
+    NO_DELTAT_REGION
+
+    ROM_REGION( 0x400000, REGION_GFX3, 0 ) 
+    ROM_LOAD16_BYTE( "captain-c1.bin", 0x000000, 0x200000, CRC(bce671cd) SHA1(755e4091871d6db28fc3cbb43f7662b48dd2bb57) )
+    ROM_LOAD16_BYTE( "captain-c2.bin", 0x000001, 0x200000, CRC(843e16ac) SHA1(4288905ef92f813b540e38702477c76dc5146312) )
+ROM_END
+
+// 503 : Gladmort by Pixelheart/ChipsOnSteroids
+ROM_START( gladmort )
+	ROM_REGION( 0x100000, REGION_CPU1, 0 )
+	ROM_LOAD16_WORD_SWAP( "503.p1", 0x000000, 0x100000, CRC(64d77ca4) SHA1(8cf0e12d462dd1f4f67c782c5c643a7da29bc718) )
+
+	NEO_SFIX_128K( "503.s1", CRC(c96154b9) SHA1(c95251dc566d4649496b7785c8e4cddd0aa67d7f) )
+
+	NEO_BIOS_SOUND_64K( "503.m1", CRC(fbccedbd) SHA1(61e7f745d24c4ec3598cbf3cefc603f7deb21497) )
+
+	ROM_REGION( 0x1000000, REGION_SOUND1, ROMREGION_SOUNDONLY )
+	ROM_LOAD( "503.v1",   0x000000, 0x400000, CRC(4c0efb20) SHA1(80424564a8cd19bbe7e3f8003129585174cc9367) )
+	ROM_LOAD( "503.v2",   0x400000, 0x400000, CRC(dbd083f5) SHA1(c76980473550fda0ece72fa87104ea79a6a8024e) )
+	ROM_LOAD( "503.v3",   0x800000, 0x400000, CRC(2f5c4eeb) SHA1(4ed687bde1d3b549581270e90832d90a46101df0) )
+	ROM_LOAD( "503.v4",   0xc00000, 0x400000, CRC(12e01947) SHA1(b8147e584712d77c47e97c7a4790807536a22a86) )
+
+  NO_DELTAT_REGION
+
+	ROM_REGION( 0x2800000, REGION_GFX3, 0 )
+	ROM_LOAD16_BYTE( "503.c1",   0x0000000, 0x1400000, CRC(c7d367cc) SHA1(91a5241ba793c367e06341c951e9fb43726d0944) )
+	ROM_LOAD16_BYTE( "503.c2",   0x0000001, 0x1400000, CRC(2c39b98e) SHA1(da26d5073fe483650cbcacf595b4410e4f5f4787) )
+ROM_END
 
 /******************************************************************************/
 
@@ -9282,6 +9327,12 @@ GAMEB( 2021, hypernoid,   neogeo, neogeo, neogeo, neogeo, neogeo,   ROT0, "M.Pri
 
 /* NEO.BYTE.FORCE */
 GAMEB( 2023, cyborgforce, neogeo, neogeo, neogeo, neogeo, neogeo,   ROT0, "Neo Byte Force Ltd", "Cyborg Force", &neogeo_ctrl, NULL )
+
+/* NEO.BYTE.FORCE */
+GAMEB( 2024, captainbarrel, neogeo, neogeo, neogeo, neogeo, neogeo, ROT0, "Neo Byte Force Ltd", "Captain Barrel", &neogeo_ctrl, NULL )  
+
+/* Pixelheart / ChipsOnSteroids */
+GAMEB( 2024, gladmort,    neogeo,  neogeo,  neogeo, neogeo, neogeo, ROT0, "Pixelheart / ChipsOnSteroids", "Gladmort", &neogeo_ctrl, NULL ) 
 
 
 #if 0

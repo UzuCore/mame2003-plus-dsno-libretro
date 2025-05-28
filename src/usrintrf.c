@@ -3365,25 +3365,21 @@ int handle_user_interface(struct mame_bitmap *bitmap)
 
 	if (setup_selected == 0)
   {
-    if(input_ui_pressed(IPT_UI_CONFIGURE))
+    if(input_ui_pressed(IPT_UI_CONFIGURE) || options.display_setup)
     {
       setup_selected = -1;
-    }
-    else if(options.display_setup)
-    {
-      setup_selected = -1;
-      setup_via_menu = 1;
-	    setup_menu_init();
+      setup_menu_init();
+      mame_pause(true);
     }
 
-    if (setup_active()) cpu_pause(true);
+    if(options.display_setup)
+      setup_via_menu = 1;
   }
 
-	if (setup_selected && setup_via_menu && !options.display_setup)
+	if (setup_via_menu && !options.display_setup)
   {
     setup_selected = 0;
     setup_via_menu = 0;
-    setup_menu_init();
     schedule_full_refresh();
   }
   else if(setup_selected)
@@ -3431,14 +3427,14 @@ int handle_user_interface(struct mame_bitmap *bitmap)
 			tilemap_xpos = 0;
 			tilemap_ypos = 0;
 
-			cpu_pause(true);
+			mame_pause(true);
 		}
 	}
 
 	if(toggle_showgfx) showcharset(bitmap);
 
 	if (!setup_active() && !toggle_showgfx && pause_action)
-		cpu_pause(false);
+		mame_pause(false);
 
 	return 0;
 }
