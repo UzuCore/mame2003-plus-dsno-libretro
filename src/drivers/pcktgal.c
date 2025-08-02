@@ -322,6 +322,29 @@ ROM_START( pcktgal )
 	ROM_LOAD( "eb06.rom",     0x0200, 0x0200, CRC(1fbd4b59) SHA1(84e20329003cf09b849b49e1d83edc330d49f404) ) /* 82s131.101 */
 ROM_END
 
+ROM_START( pcktgalk )
+	ROM_REGION( 0x14000, REGION_CPU1, 0 )	 /* 64k for code + 16k for banks */
+	ROM_LOAD( "eb04.rom",	   0x10000, 0x4000, CRC(8215d60d) SHA1(ac26dfce7e215be21f2a17f864c5e966b8b8322e) )
+	ROM_CONTINUE(			   0x04000, 0xc000)
+	/* 4000-7fff is banked but code falls through from 7fff to 8000, so */
+	/* I have to load the bank directly at 4000. */
+
+	ROM_REGION( 2*0x18000, REGION_CPU2, 0 )	 /* 96k for code + 96k for decrypted opcodes */
+	ROM_LOAD( "eb03.rom",	   0x10000, 0x8000, CRC(cb029b02) SHA1(fbb3da08ed05ae73fbeeb13e0e2ff735aaf83db8) )
+	ROM_CONTINUE(			   0x08000, 0x8000 )
+
+	ROM_REGION( 0x20000, REGION_GFX1, ROMREGION_DISPOSE )
+	ROM_LOAD( "eb01k.rom",	   0x00000, 0x10000, CRC(3b9f8e29) SHA1(b7ae6d72b9fc1f4964b673346d76a9d24cd5606c) )
+	ROM_LOAD( "eb02.rom",	   0x10000, 0x10000, CRC(a9dcd339) SHA1(245824ab86cdfe4b842ce1be0af60f2ff4c6ae07) )
+
+	ROM_REGION( 0x10000, REGION_GFX2, ROMREGION_DISPOSE )
+	ROM_LOAD( "eb00.rom",	   0x00000, 0x10000, CRC(6c1a14a8) SHA1(03201197304c5f1d854b8c4f4a5c78336b51f872) )
+
+	ROM_REGION( 0x0400, REGION_PROMS, 0 )
+	ROM_LOAD( "eb05.rom",     0x0000, 0x0200, CRC(3b6198cb) SHA1(d32b364cfce99637998ca83ad21783f80364dd65) ) /* 82s147.084 */
+	ROM_LOAD( "eb06.rom",     0x0200, 0x0200, CRC(1fbd4b59) SHA1(84e20329003cf09b849b49e1d83edc330d49f404) ) /* 82s131.101 */
+ROM_END
+
 ROM_START( pcktgalb )
 	ROM_REGION( 0x14000, REGION_CPU1, 0 )	 /* 64k for code + 16k for banks */
 	ROM_LOAD( "sexybill.001", 0x10000, 0x4000, CRC(4acb3e84) SHA1(c83d03969587c6be80fb8fc84afe250907674a44) )
@@ -460,5 +483,6 @@ static DRIVER_INIT( pcktgal )
 GAME( 1987, pcktgal,  0,       pcktgal, pcktgal, pcktgal,  ROT0, "Data East Corporation", "Pocket Gal (Japan)" )
 GAME( 1987, pcktgalb, pcktgal, bootleg, pcktgal, deco222,  ROT0, "bootleg", "Pocket Gal (bootleg)" )
 GAME( 1989, pcktgal2, pcktgal, pcktgal, pcktgal, graphics, ROT0, "Data East Corporation", "Pocket Gal 2 (World[Q])" )
+GAME( 1987, pcktgalk, pcktgal, pcktgal, pcktgal, pcktgal,  ROT0, "Data East Corporation", "Pocket Gal (Korean Translation)" )
 GAME( 1989, spool3,   pcktgal, pcktgal, pcktgal, graphics, ROT0, "Data East Corporation", "Super Pool III (World[Q])" )
 GAME( 1990, spool3i,  pcktgal, pcktgal, pcktgal, graphics, ROT0, "Data East Corporation (I-Vics license)", "Super Pool III (I-Vics)" )

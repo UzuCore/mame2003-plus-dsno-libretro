@@ -1953,6 +1953,7 @@ V-V                           TP-027
 	DRIVER( donpachk )	/* (c) 1995 Atlus/Cave */
 	DRIVER( metmqstr )	/* (c) 1995 Banpresto / Pandorabox */
 	DRIVER( nmaster )	/* (c) 1995 Banpresto / Pandorabox */
+	DRIVER( nmasterk )	/* (c) 1995 Banpresto / Pandorabox (Korean Translation) */
 	DRIVER( sailormn )	/* (c) 1995 Banpresto (country is in EEPROM) */
 	DRIVER( sailormo )	/* (c) 1995 Banpresto (country is in EEPROM) */
 	DRIVER( agallet )	/* (c) 1996 Banpresto / Gazelle (country is in EEPROM) */
@@ -2944,7 +2945,8 @@ V-V                           TP-027
 	DRIVER( wbml )		/* bootleg (S2) */
 	DRIVER( wbmljo )	/* (c) 1987 Sega/Westone (S2) */
 	DRIVER( wbmljb )	/* (c) 1987 Sega/Westone (S2) */
-	DRIVER( wbmlvc )        /* (c) 2009 Sega/Westone Virtual Console English Version */
+	DRIVER( wbmlkb )	/* (c) 1987 Sega/Westone (Korean Translation) */
+	DRIVER( wbmlvc )	/* (c) 2009 Sega/Westone Virtual Console English Version */
 	DRIVER( wbmlb )		/* bootleg? (S2) */
 	DRIVER( dakkochn )	/* 836-6483? (S2) */
 	DRIVER( ufosensi )	/* 834-6659 (S2) */
@@ -3478,6 +3480,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( pcktgal )	/* (c) 1987 Data East Corporation (Japan) */
 	DRIVER( pcktgalb )	/* bootleg */
 	DRIVER( pcktgal2 )	/* (c) 1989 Data East Corporation (World?) */
+	DRIVER( pcktgalk )	/* (c) 1987 Data East Corporation (Korean Translation) */
 	DRIVER( spool3 )	/* (c) 1989 Data East Corporation (World?) */
 	DRIVER( spool3i )	/* (c) 1990 Data East Corporation + I-Vics license */
 	DRIVER( battlera )	/* (c) 1988 Data East Corporation (World) */
@@ -3700,6 +3703,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( rygar )		/* 6002 - (c) 1986 Tecmo */
 	DRIVER( rygar2 )	/* 6002 - (c) 1986 Tecmo */
 	DRIVER( rygarj )	/* 6002 - (c) 1986 Tecmo */
+	DRIVER( rygark )	/* 6002 - (c) 1986 Tecmo (Korean Translation) */
 	DRIVER( gemini )	/* (c) 1987 Tecmo */
   DRIVER( backfirt )	/* 6217 - (c) 1988 Tecmo */
 	DRIVER( silkworm )	/* 6217 - (c) 1988 Tecmo */
@@ -5906,6 +5910,7 @@ Other Sun games
 	DRIVER( tpgolf )	/* 0003 (c) 1990 SNK */
 	DRIVER( mahretsu )	/* 0004 (c) 1990 SNK */
 	DRIVER( maglord )	/* 0005 (c) 1990 Alpha Denshi Co. */
+	DRIVER( maglordk )	/* 0005 (c) 2025 Alpha Denshi Co. */
 	DRIVER( maglordh )	/* 0005 (c) 1990 Alpha Denshi Co. */
 	DRIVER( ridhero )	/* 0006 (c) 1990 SNK */
 	DRIVER( ridheroh )	/* 0006 (c) 1990 SNK */
@@ -5953,8 +5958,10 @@ Other Sun games
 	DRIVER( aof )		/* 0044 (c) 1992 SNK */
 	DRIVER( aofk )		/* 0044 (c) 2016 (Korean Translation) SNK */
 	DRIVER( samsho )	/* 0045 (c) 1993 SNK */
+	DRIVER( samshok )	/* 0045 (c) 2025 (Korean Translation) SNK */
 	DRIVER( samshouh )	/* 0045 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( tophuntr )	/* 0046 (c) 1994 SNK */
+	DRIVER( tophuntrk )	/* 0046 (c) 2025 SNK */
 	DRIVER( fatfury2 )	/* 0047 (c) 1992 SNK */
 	DRIVER( janshin )	/* 0048 (c) 1994 Aicom */
 	DRIVER( androdun )	/* 0049 (c) 1992 Visco */
@@ -5963,6 +5970,7 @@ Other Sun games
 	DRIVER( ssideki )	/* 0052 (c) 1992 SNK */
 	DRIVER( wh1 )		/* 0053 (c) 1992 Alpha Denshi Co. */
 	DRIVER( wh1h )		/* 0053 (c) 1992 Alpha Denshi Co. */
+	DRIVER( wh1k )		/* 0053 (c) 1992 Alpha Denshi Co. */
 	DRIVER( crswd2bl )  /* 0054 Crossed Swords 2  (CD only? not confirmed, MVS might exist) */
 	DRIVER( kof94 )		/* 0055 (c) 1994 SNK */
 	DRIVER( kof94k )	/* 0055 (c) 2006 (Korean Translation) SNK */
@@ -5976,6 +5984,7 @@ Other Sun games
 	DRIVER( fightfva )	/* 0060 (c) 1994 Viccom */
 	DRIVER( ssideki2 )	/* 0061 (c) 1994 SNK */
 	DRIVER( spinmast )	/* 0062 (c) 1993 Data East Corporation */
+	DRIVER( spinmastk )	/* 0062 (c) 2025 Data East Corporation */
 	DRIVER( samsho2 )	/* 0063 (c) 1994 SNK */
 	DRIVER( samsho2uh )	/* 0063 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( wh2j )		/* 0064 (c) 1994 ADK / SNK */
@@ -6054,6 +6063,7 @@ Other Sun games
 	DRIVER( rbffspecuh )	/* 0223 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( twinspri )	/* 0224 (c) 1996 ADK */
 	DRIVER( wakuwak7 )	/* 0225 (c) 1996 Sunsoft */
+	DRIVER( wakuwak7k )	/* 0225 (c) 1996 Sunsoft */
 	/* 0226 Pair Pair Wars (prototype) 1996 Sunsoft? */
 	DRIVER( stakwin2 )	/* 0227 (c) 1996 Saurus */
 	DRIVER( ghostlop )	/* 0228 GhostLop (prototype) 1996? Data East */
