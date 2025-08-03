@@ -5961,6 +5961,7 @@ Other Sun games
 	DRIVER( samshok )	/* 0045 (c) 2025 (Korean Translation) SNK */
 	DRIVER( samshouh )	/* 0045 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( tophuntr )	/* 0046 (c) 1994 SNK */
+	DRIVER( tophuntrk )	/* 0046 (c) 2006 (Korean Translation) SNK */
 	DRIVER( fatfury2 )	/* 0047 (c) 1992 SNK */
 	DRIVER( janshin )	/* 0048 (c) 1994 Aicom */
 	DRIVER( androdun )	/* 0049 (c) 1992 Visco */
