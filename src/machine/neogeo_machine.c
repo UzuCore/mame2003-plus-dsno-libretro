@@ -618,8 +618,6 @@ static void neogeo_custom_memory(void)
 			!strcmp(Machine->gamedrv->name,"kof98") ||
 			!strcmp(Machine->gamedrv->name,"kof98n") ||
 			!strcmp(Machine->gamedrv->name,"kof98k") ||
-			!strcmp(Machine->gamedrv->name,"kof98") ||
-			!strcmp(Machine->gamedrv->name,"kof98n") ||
 			!strcmp(Machine->gamedrv->name,"kof98kr") ||
 			!strcmp(Machine->gamedrv->name,"kof98uh") ||
 			!strcmp(Machine->gamedrv->name,"kof99") ||
@@ -641,8 +639,8 @@ static void neogeo_custom_memory(void)
 			!strcmp(Machine->gamedrv->name,"rbff2a") ||
 			!strcmp(Machine->gamedrv->name,"rbff2uh") ||
 			!strcmp(Machine->gamedrv->name,"mslug2") ||
-      !strcmp(Machine->gamedrv->name,"mslug2t") ||
 			!strcmp(Machine->gamedrv->name,"mslug2uh") ||
+			!strcmp(Machine->gamedrv->name,"mslug2t") ||
 			!strcmp(Machine->gamedrv->name,"mslug3") ||
 			!strcmp(Machine->gamedrv->name,"mslug3n") ||
 			!strcmp(Machine->gamedrv->name,"mslug3uh") ||
@@ -689,7 +687,7 @@ static void neogeo_custom_memory(void)
 		mem16[0x0000/2] = 0x0010;
 	}
 
-	if (!strcmp(Machine->gamedrv->name,"mslugx") || !strcmp(Machine->gamedrv->name,"mslugxuh"))
+	if (!strcmp(Machine->gamedrv->name,"mslugx"))
 	{
 		/* patch out protection checks */
 		int i;
