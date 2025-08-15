@@ -2868,7 +2868,7 @@ ROM_END
 ROM_START( tophuntr )
 	ROM_REGION( 0x200000, REGION_CPU1, 0 )
 	ROM_LOAD16_WORD_SWAP( "046-p1.bin", 0x000000, 0x100000, CRC(69fa9e29) SHA1(9a40a16163193bb506a32bd34f6323b25ec69622) )
-	ROM_LOAD16_WORD_SWAP( "046-p2.sp2", 0x100000, 0x100000, CRC(f182cb3e) SHA1(6b4e0af5d4e623f0682f37ff5c69e5b705e20028) )
+	ROM_LOAD16_WORD_SWAP( "046-p2.bin", 0x100000, 0x100000, CRC(f182cb3e) SHA1(6b4e0af5d4e623f0682f37ff5c69e5b705e20028) )
 
 	NEO_SFIX_128K( "046-s1.bin", CRC(14b01d7b) SHA1(618ce75c25d6cc86a3b46bd64a0aa34ab82f75ae) )
 
@@ -3801,6 +3801,27 @@ ROM_START( strhoop )
 	ROM_LOAD16_BYTE( "079-c2.bin", 0x000001, 0x200000, CRC(5b9b8fb6) SHA1(362aa0de0d2cf9aa03758363ffb1e15e046a3930) ) /* Plane 2,3 */
 	ROM_LOAD16_BYTE( "079-c3.bin", 0x400000, 0x200000, CRC(cd65bb62) SHA1(6f47d77d61d4289bcee82df7c4efa5346a6e4c80) ) /* Plane 0,1 */
 	ROM_LOAD16_BYTE( "079-c4.bin", 0x400001, 0x200000, CRC(a4c90213) SHA1(1b9f7b5f31acd6df2bdab81b849f32c13aa1b884) ) /* Plane 2,3 */
+ROM_END
+
+ROM_START( strhoopk )
+	ROM_REGION( 0x100000, REGION_CPU1, 0 )
+	ROM_LOAD16_WORD_SWAP( "079-p1k.bin", 0x000000, 0x100000, CRC(fcc0e3c3) SHA1(676e3c1861c658222ffc0a55adb1763445819caa) )
+
+	NEO_SFIX_128K( "079-s1k.bin", CRC(fc9ddec3) SHA1(cc819c5badce1e6a6afefb8a07c223d5ba084cb3) )
+
+	NEO_BIOS_SOUND_64K( "079-m1.bin", CRC(1a5f08db) SHA1(3121ed568fba4c30794b00d326ddb0c750b7f4ee) )
+
+	ROM_REGION( 0x280000, REGION_SOUND1, ROMREGION_SOUNDONLY )
+	ROM_LOAD( "079-v1.bin", 0x000000, 0x200000, CRC(718a2400) SHA1(cefc5d0b302bd4a87ab1fa244ade4482c23c6806) )
+	ROM_LOAD( "079-v2.bin", 0x200000, 0x080000, CRC(b19884f8) SHA1(5fe910f2029da19ddab4dc95c2292d7fbb086741) )
+
+	NO_DELTAT_REGION
+
+	ROM_REGION( 0x800000, REGION_GFX3, 0 )
+	ROM_LOAD16_BYTE( "079-c1k.bin", 0x000000, 0x200000, CRC(85c3029a) SHA1(87c418ada392434ff39c0b5e5568324a7abe81c5) ) /* Plane 0,1 */
+	ROM_LOAD16_BYTE( "079-c2k.bin", 0x000001, 0x200000, CRC(2028de30) SHA1(f961fdb68536edd29bc435ad5c680985e34e8fc2) ) /* Plane 2,3 */
+	ROM_LOAD16_BYTE( "079-c3k.bin", 0x400000, 0x200000, CRC(79cb4d8a) SHA1(3f7ef327d6bcf07c031d7c6081cea60640a5b6cd) ) /* Plane 0,1 */
+	ROM_LOAD16_BYTE( "079-c4k.bin", 0x400001, 0x200000, CRC(1f2799b5) SHA1(6658128c0f745e0191bbb9bbc0682c1b49148b49) ) /* Plane 2,3 */
 ROM_END
 
 ROM_START( quizkof )
@@ -9275,6 +9296,7 @@ GAMEB( 1994, wjammers,     neogeo,       neogeo, neogeo, neogeo,  neogeo,   ROT0
 GAMEB( 2005, wjammerk,     wjammers,     neogeo, neogeo, neogeo,  neogeo,   ROT0, "Data East Corporation", "Windjammers / Flying Power Disc (Korean Translation)", &neogeo_ctrl, NULL )
 GAMEB( 1994, karnovr,      neogeo,       neogeo, raster, neogeo,  neogeo,   ROT0, "Data East Corporation", "Karnov's Revenge / Fighter's History Dynamite", &neogeo_ctrl, NULL )
 GAMEB( 1994, strhoop,      neogeo,       neogeo, raster, neogeo,  neogeo,   ROT0, "Data East Corporation", "Street Hoop / Street Slam / Dunk Dream", &neogeo_ctrl, NULL )
+GAMEB( 2025, strhoopk,     strhoop,      neogeo, raster, neogeo,  neogeo,   ROT0, "Data East Corporation", "Street Hoop / Street Slam / Dunk Dream (Korean Translation)", &neogeo_ctrl, NULL )
 GAMEB( 1996, magdrop2,     neogeo,       neogeo, neogeo, neogeo,  neogeo,   ROT0, "Data East Corporation", "Magical Drop II", &neogeo_ctrl, NULL )
 GAMEB( 1997, magdrop3,     neogeo,       neogeo, neogeo, neogeo,  neogeo,   ROT0, "Data East Corporation", "Magical Drop III", &neogeo_ctrl, NULL )
 

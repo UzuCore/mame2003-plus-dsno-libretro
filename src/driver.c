@@ -6004,6 +6004,7 @@ Other Sun games
 	/* 0077 The Warlocks of the Fates (prototype) 1995 Astec */
 	DRIVER( galaxyfg )	/* 0078 (c) 1995 Sunsoft */
 	DRIVER( strhoop )	/* 0079 (c) 1994 Data East Corporation */
+	DRIVER( strhoopk )	/* 0079 (c) 2025 (Korean Translation) Data East Corporation */
 	DRIVER( quizkof )	/* 0080 (c) 1995 Saurus */
 	DRIVER( ssideki3 )	/* 0081 (c) 1995 SNK */
 	DRIVER( doubledr )	/* 0082 (c) 1995 Technos */
