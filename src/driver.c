@@ -5952,6 +5952,7 @@ Other Sun games
 	/* 0035 Mystic Wand (prototype) 1991 Alpha */
 	DRIVER( bakatono )	/* 0036 (c) 1991 Monolith Corp. */
 	DRIVER( crsword )	/* 0037 (c) 1991 Alpha Denshi Co. */
+	DRIVER( crswordk )	/* 0037 (c) 2025 (Korean Translation) Alpha Denshi Co. */
 	DRIVER( trally )	/* 0038 (c) 1991 Alpha Denshi Co. */
 	DRIVER( kotm2 )		/* 0039 (c) 1992 SNK */
 	DRIVER( sengoku2 )	/* 0040 (c) 1993 SNK */
@@ -5966,9 +5967,11 @@ Other Sun games
 	DRIVER( tophuntr )	/* 0046 (c) 1994 SNK */
 	DRIVER( tophuntrk )	/* 0046 (c) 2006 (Korean Translation) SNK */
 	DRIVER( fatfury2 )	/* 0047 (c) 1992 SNK */
+	DRIVER( fatfury2k )	/* 0047 (c) 2025 (Korean Translation) SNK */
 	DRIVER( janshin )	/* 0048 (c) 1994 Aicom */
 	DRIVER( androdun )	/* 0049 (c) 1992 Visco */
 	DRIVER( ncommand )	/* 0050 (c) 1992 Alpha Denshi Co. */
+	DRIVER( ncommandk )	/* 0050 (c) 2025 (Korean Translation) Alpha Denshi Co. */
 	DRIVER( viewpoin )	/* 0051 (c) 1992 Sammy */
 	DRIVER( ssideki )	/* 0052 (c) 1992 SNK */
 	DRIVER( wh1 )		/* 0053 (c) 1992 Alpha Denshi Co. */
@@ -6021,6 +6024,7 @@ Other Sun games
 	DRIVER( tws96 )		/* 0086 (c) 1996 Tecmo */
 	DRIVER( samsho3 )	/* 0087 (c) 1995 SNK */
 	DRIVER( samsho3uh )	/* 0087 (c) 2024 (AES Uncensored Hack) SNK */
+	DRIVER( samsho3k )	/* 0087 (c) 2025 (Korean Translation) SNK */
 	DRIVER( stakwin )	/* 0088 (c) 1995 Saurus */
 	DRIVER( pulstar )	/* 0089 (c) 1995 Aicom */
 	DRIVER( whp )		/* 0090 (c) 1995 ADK / SNK */

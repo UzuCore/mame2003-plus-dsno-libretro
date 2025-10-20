@@ -595,6 +595,7 @@ static void neogeo_custom_memory(void)
 			!strcmp(Machine->gamedrv->name,"samsh5spuh") ||
 			!strcmp(Machine->gamedrv->name,"samsho3") ||
 			!strcmp(Machine->gamedrv->name,"samsho3uh") ||
+			!strcmp(Machine->gamedrv->name,"samsho3k") ||
 			!strcmp(Machine->gamedrv->name,"samsho4") ||
 			!strcmp(Machine->gamedrv->name,"samsho4uh") ||
 			!strcmp(Machine->gamedrv->name,"aof3") ||
@@ -663,7 +664,7 @@ static void neogeo_custom_memory(void)
 
 	/* Hacks the program rom of Fatal Fury 2, needed either in arcade or console mode */
 	/* otherwise at level 2 you cannot hit the opponent and other problems */
-	if (!strcmp(Machine->gamedrv->name,"fatfury2"))
+	if (!strcmp(Machine->gamedrv->name,"fatfury2") || !strcmp(Machine->gamedrv->name,"fatfury2k"))
 	{
 		/* there seems to also be another protection check like the countless ones */
 		/* patched above by protecting a SRAM location, but that trick doesn't work */
