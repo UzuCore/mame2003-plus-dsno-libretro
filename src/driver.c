@@ -6034,6 +6034,8 @@ Other Sun games
 	DRIVER( gowcaizr )	/* 0094 (c) 1995 Technos */
 	DRIVER( rbff1 )		/* 0095 (c) 1995 SNK */
 	DRIVER( rbff1uh )	/* 0095 (c) 2024 (AES Uncensored Hack) SNK */
+	DRIVER( rbff1kr )	/* 0095 (c) 2025 (Korean Translation) SNK */
+	DRIVER( rbff1akr )	/* 0095 (c) 2025 (Korean Translation, Bug Fix Revision) SNK */
 	DRIVER( aof3 )		/* 0096 (c) 1996 SNK */
 	DRIVER( aof3uh )	/* 0096 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( sonicwi3 )	/* 0097 (c) 1995 Video System Co. */
