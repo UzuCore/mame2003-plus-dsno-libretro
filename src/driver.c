@@ -3294,6 +3294,8 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	/* Genie Hardware (uses Genesis VDP) also has 'Sun Mixing Co' put into tile ram */
 	DRIVER( puckpkmn )	/* (c) 2000 Genie */
 	DRIVER( jzth )		/* (c) 2000 <unknown> */
+  DRIVER( songjang )  /* (c) 2000 WAH LAB */
+  DRIVER( shuifeng )  /* (c) 1999 WAH LAB */
 	DRIVER( sbubsm )	/* (c) 1996 Sun Mixing */
   DRIVER( barek3mb ) /* (c) 1994 bootleg / Sega */
   DRIVER( aladmdb ) /*  (c) 1993 bootleg / Sega */
@@ -5682,6 +5684,7 @@ Other Sun games
   DRIVER( puzzli2 )   /* (c) 1999 */
   DRIVER( puzzli2s )  /* (c) 2001 */
   DRIVER( py2k2 )     /* (c) 2001 */
+  DRIVER( ddp2 )      /* (c) 2001 */
 
 	/* RamTek games */
 	DRIVER( hitme )		/* [1976 Ramtek] */
@@ -5949,6 +5952,7 @@ Other Sun games
 	/* 0035 Mystic Wand (prototype) 1991 Alpha */
 	DRIVER( bakatono )	/* 0036 (c) 1991 Monolith Corp. */
 	DRIVER( crsword )	/* 0037 (c) 1991 Alpha Denshi Co. */
+	DRIVER( crswordk )	/* 0037 (c) 2025 (Korean Translation) Alpha Denshi Co. */
 	DRIVER( trally )	/* 0038 (c) 1991 Alpha Denshi Co. */
 	DRIVER( kotm2 )		/* 0039 (c) 1992 SNK */
 	DRIVER( sengoku2 )	/* 0040 (c) 1993 SNK */
@@ -5963,9 +5967,11 @@ Other Sun games
 	DRIVER( tophuntr )	/* 0046 (c) 1994 SNK */
 	DRIVER( tophuntrk )	/* 0046 (c) 2006 (Korean Translation) SNK */
 	DRIVER( fatfury2 )	/* 0047 (c) 1992 SNK */
+	DRIVER( fatfury2k )	/* 0047 (c) 2025 (Korean Translation) SNK */
 	DRIVER( janshin )	/* 0048 (c) 1994 Aicom */
 	DRIVER( androdun )	/* 0049 (c) 1992 Visco */
 	DRIVER( ncommand )	/* 0050 (c) 1992 Alpha Denshi Co. */
+	DRIVER( ncommandk )	/* 0050 (c) 2025 (Korean Translation) Alpha Denshi Co. */
 	DRIVER( viewpoin )	/* 0051 (c) 1992 Sammy */
 	DRIVER( ssideki )	/* 0052 (c) 1992 SNK */
 	DRIVER( wh1 )		/* 0053 (c) 1992 Alpha Denshi Co. */
@@ -6018,6 +6024,7 @@ Other Sun games
 	DRIVER( tws96 )		/* 0086 (c) 1996 Tecmo */
 	DRIVER( samsho3 )	/* 0087 (c) 1995 SNK */
 	DRIVER( samsho3uh )	/* 0087 (c) 2024 (AES Uncensored Hack) SNK */
+	DRIVER( samsho3k )	/* 0087 (c) 2025 (Korean Translation) SNK */
 	DRIVER( stakwin )	/* 0088 (c) 1995 Saurus */
 	DRIVER( pulstar )	/* 0089 (c) 1995 Aicom */
 	DRIVER( whp )		/* 0090 (c) 1995 ADK / SNK */
@@ -6027,6 +6034,8 @@ Other Sun games
 	DRIVER( gowcaizr )	/* 0094 (c) 1995 Technos */
 	DRIVER( rbff1 )		/* 0095 (c) 1995 SNK */
 	DRIVER( rbff1uh )	/* 0095 (c) 2024 (AES Uncensored Hack) SNK */
+	DRIVER( rbff1kr )	/* 0095 (c) 2025 (Korean Translation) SNK */
+	DRIVER( rbff1akr )	/* 0095 (c) 2025 (Korean Translation, Bug Fix Revision) SNK */
 	DRIVER( aof3 )		/* 0096 (c) 1996 SNK */
 	DRIVER( aof3uh )	/* 0096 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( sonicwi3 )	/* 0097 (c) 1995 Video System Co. */
