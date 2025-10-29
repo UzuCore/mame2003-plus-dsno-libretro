@@ -1842,14 +1842,13 @@ Chips:	PS2001B
 ***************************************************************************/
 
 ROM_START( gunbird )
-
 	ROM_REGION( 0x100000, REGION_CPU1, 0 )		/* Main CPU Code */
 	ROM_LOAD32_WORD_SWAP( "4-u46.bin", 0x000000, 0x040000, CRC(b78ec99d) SHA1(399b79931652d9df1632cd4d7ec3d214e473a5c3) ) /* 1&0*/
 	ROM_LOAD32_WORD_SWAP( "5-u39.bin", 0x000002, 0x040000, CRC(925f095d) SHA1(301a536119a0320a756e9c6e51fb10e36b90ef16) ) /* 3&2*/
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "3-u71.bin", 0x00000, 0x20000, CRC(2168e4ba) SHA1(ca7ad6acb5f806ce2528e7b52c19e8cceecb8543) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(            0x10000, 0x20000 )
 
 	ROM_REGION( 0x700000, REGION_GFX1, ROMREGION_DISPOSE )	/* Sprites */
 	ROM_LOAD( "u14.bin",  0x000000, 0x200000, CRC(7d7e8a00) SHA1(9f35f5b54ae928e9bf2aa6ad4604f669857955ec) )
@@ -1868,18 +1867,16 @@ ROM_START( gunbird )
 
 	ROM_REGION( 0x040000, REGION_USER1, 0 )	/* Sprites LUT */
 	ROM_LOAD( "u3.bin",  0x000000, 0x040000, CRC(0905aeb2) SHA1(8cca09f7dfe3f804e77515f7b1b1bdbeb7bb3d80) )
-
 ROM_END
 
 ROM_START( gunbirdk )
-
 	ROM_REGION( 0x100000, REGION_CPU1, 0 )		/* Main CPU Code */
 	ROM_LOAD32_WORD_SWAP( "1k-u46.bin", 0x000000, 0x080000, CRC(745cee52) SHA1(6c5bb92c92c55f882484417bc1aa580684019610) ) /* 1&0*/
 	ROM_LOAD32_WORD_SWAP( "2k-u39.bin", 0x000002, 0x080000, CRC(669632fb) SHA1(885dea42e6da35e9166a208b18dbd930642c26cd) ) /* 3&2*/
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "k3-u71.bin", 0x00000, 0x20000, CRC(11994055) SHA1(619776c178361f23de37ff14e87284ec0f1f4f10) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(             0x10000, 0x20000 )
 
 	ROM_REGION( 0x700000, REGION_GFX1, ROMREGION_DISPOSE )	/* Sprites */
 	ROM_LOAD( "u14.bin",  0x000000, 0x200000, CRC(7d7e8a00) SHA1(9f35f5b54ae928e9bf2aa6ad4604f669857955ec) )
@@ -1898,18 +1895,16 @@ ROM_START( gunbirdk )
 
 	ROM_REGION( 0x040000, REGION_USER1, 0 )	/* Sprites LUT */
 	ROM_LOAD( "u3.bin",  0x000000, 0x040000, CRC(0905aeb2) SHA1(8cca09f7dfe3f804e77515f7b1b1bdbeb7bb3d80) )
-
 ROM_END
 
 ROM_START( gunbirdj )
-
 	ROM_REGION( 0x100000, REGION_CPU1, 0 )		/* Main CPU Code */
 	ROM_LOAD32_WORD_SWAP( "1-u46.bin", 0x000000, 0x040000, CRC(474abd69) SHA1(27f37333075f9c92849101aad4875e69004d747b) ) /* 1&0*/
 	ROM_LOAD32_WORD_SWAP( "2-u39.bin", 0x000002, 0x040000, CRC(3e3e661f) SHA1(b5648546f390539b0f727a9a62d1b9516254ae21) ) /* 3&2*/
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "3-u71.bin", 0x00000, 0x20000, CRC(2168e4ba) SHA1(ca7ad6acb5f806ce2528e7b52c19e8cceecb8543) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(            0x10000, 0x20000 )
 
 	ROM_REGION( 0x700000, REGION_GFX1, ROMREGION_DISPOSE )	/* Sprites */
 	ROM_LOAD( "u14.bin",  0x000000, 0x200000, CRC(7d7e8a00) SHA1(9f35f5b54ae928e9bf2aa6ad4604f669857955ec) )
@@ -1928,7 +1923,6 @@ ROM_START( gunbirdj )
 
 	ROM_REGION( 0x040000, REGION_USER1, 0 )	/* Sprites LUT */
 	ROM_LOAD( "u3.bin",  0x000000, 0x040000, CRC(0905aeb2) SHA1(8cca09f7dfe3f804e77515f7b1b1bdbeb7bb3d80) )
-
 ROM_END
 
 ROM_START( gunbirdka )
@@ -1938,7 +1932,7 @@ ROM_START( gunbirdka )
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "3-u71.bin", 0x00000, 0x20000, CRC(2168e4ba) SHA1(ca7ad6acb5f806ce2528e7b52c19e8cceecb8543) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(            0x10000, 0x20000 )
 
 	ROM_REGION( 0x700000, REGION_GFX1, ROMREGION_DISPOSE )	/* Sprites */
 	ROM_LOAD( "u14k.bin", 0x000000, 0x200000, CRC(e143090a) SHA1(545ba6fdfd9b94efeb798b06ba07e8a5b27f8608) )
@@ -1961,14 +1955,13 @@ ROM_END
 
 
 ROM_START( btlkroad )
-
 	ROM_REGION( 0x100000, REGION_CPU1, 0 )		/* Main CPU Code */
 	ROM_LOAD32_WORD_SWAP( "4-u46.bin", 0x000000, 0x040000, CRC(8a7a28b4) SHA1(f7197be673dfd0ddf46998af81792b81d8fe9fbf) ) /* 1&0*/
 	ROM_LOAD32_WORD_SWAP( "5-u39.bin", 0x000002, 0x040000, CRC(933561fa) SHA1(f6f3b1e14b1cfeca26ef8260ac4771dc1531c357) ) /* 3&2*/
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "3-u71.bin", 0x00000, 0x20000, CRC(22411fab) SHA1(1094cb51712e40ae65d0082b408572bdec06ae8b) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(            0x10000, 0x20000 )
 
 	ROM_REGION( 0x700000, REGION_GFX1, ROMREGION_DISPOSE )	/* Sprites */
 	ROM_LOAD( "u14.bin",  0x000000, 0x200000, CRC(282d89c3) SHA1(3b4b17f4a37efa2f7e232488aaba7c77d10c84d2) )
@@ -1987,10 +1980,7 @@ ROM_START( btlkroad )
 
 	ROM_REGION( 0x040000, REGION_USER1, 0 )	/* Sprites LUT */
 	ROM_LOAD( "u3.bin",  0x000000, 0x040000, CRC(30d541ed) SHA1(6f7fb5f5ecbce7c086185392de164ebb6887e780) )
-
 ROM_END
-
-
 
 DRIVER_INIT( gunbird )
 {
@@ -2002,7 +1992,6 @@ DRIVER_INIT( gunbird )
 
 	psikyo_ka302c_banking = 1;
 }
-
 
 /***************************************************************************
 
@@ -2021,14 +2010,13 @@ Chips:	PS2001B
 ***************************************************************************/
 
 ROM_START( s1945jn )
-
 	ROM_REGION( 0x100000, REGION_CPU1, 0 )		/* Main CPU Code */
 	ROM_LOAD32_WORD_SWAP( "1-u46.bin", 0x000000, 0x080000, CRC(45fa8086) SHA1(f1753b9420596f4b828c77e877a044ba5fb01b28) ) /* 1&0*/
 	ROM_LOAD32_WORD_SWAP( "2-u39.bin", 0x000002, 0x080000, CRC(0152ab8c) SHA1(2aef4cb88341b35f20bb551716f1e5ac2731e9ba) ) /* 3&2*/
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "3-u71.bin", 0x00000, 0x20000, CRC(e3e366bd) SHA1(1f5b5909745802e263a896265ea365df76d3eaa5) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(            0x10000, 0x20000 )
 
 	ROM_REGION( 0x800000, REGION_GFX1, ROMREGION_DISPOSE )	/* Sprites */
 	ROM_LOAD( "u20.bin",  0x000000, 0x200000, CRC(28a27fee) SHA1(913f3bc4d0c6fb6b776a020c8099bf96f16fd06f) )
@@ -2047,7 +2035,6 @@ ROM_START( s1945jn )
 
 	ROM_REGION( 0x040000, REGION_USER1, 0 )	/* */
 	ROM_LOAD( "u1.bin",  0x000000, 0x040000, CRC(dee22654) SHA1(5df05b0029ff7b1f7f04b41da7823d2aa8034bd2) )
-
 ROM_END
 
 DRIVER_INIT( s1945jn )
@@ -2060,7 +2047,6 @@ DRIVER_INIT( s1945jn )
 
 	psikyo_ka302c_banking = 1;
 }
-
 
 /***************************************************************************
 
@@ -2086,14 +2072,13 @@ Chips:	PS2001B
 ***************************************************************************/
 
 ROM_START( s1945 )
-
 	ROM_REGION( 0x100000, REGION_CPU1, 0 )		/* Main CPU Code */
 	ROM_LOAD32_WORD_SWAP( "2s.u40", 0x000000, 0x040000, CRC(9b10062a) SHA1(cf963bba157422b659d8d64b4493eb7d69cd07b7) ) /* 1&0*/
 	ROM_LOAD32_WORD_SWAP( "3s.u41", 0x000002, 0x040000, CRC(f87e871a) SHA1(567167c7fcfb622f78e211d74b04060c3d29d6b7) ) /* 3&2*/
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "3-u63.bin", 0x00000, 0x20000, CRC(42d40ae1) SHA1(530a5a3f78ac489b84a631ea6ce21010a4f4d31b) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(            0x10000, 0x20000 )
 
 	ROM_REGION( 0x000100, REGION_CPU3, 0 )		/* MCU? */
 	 /*	ROM_LOAD( "4-u59.bin", 0x00000, 0x00100, NO_DUMP )*/
@@ -2112,18 +2097,16 @@ ROM_START( s1945 )
 
 	ROM_REGION( 0x040000, REGION_USER1, 0 )	/* */
 	ROM_LOAD( "u1.bin",  0x000000, 0x040000, CRC(dee22654) SHA1(5df05b0029ff7b1f7f04b41da7823d2aa8034bd2) )
-
 ROM_END
 
 ROM_START( s1945j )
-
 	ROM_REGION( 0x100000, REGION_CPU1, 0 )		/* Main CPU Code */
 	ROM_LOAD32_WORD_SWAP( "1-u40.bin", 0x000000, 0x040000, CRC(c00eb012) SHA1(080dae010ca83548ebdb3324585d15e48baf0541) ) /* 1&0*/
 	ROM_LOAD32_WORD_SWAP( "2-u41.bin", 0x000002, 0x040000, CRC(3f5a134b) SHA1(18bb3bb1e1adadcf522795f5cf7d4dc5a5dd1f30) ) /* 3&2*/
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "3-u63.bin", 0x00000, 0x20000, CRC(42d40ae1) SHA1(530a5a3f78ac489b84a631ea6ce21010a4f4d31b) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(            0x10000, 0x20000 )
 
 	ROM_REGION( 0x000100, REGION_CPU3, 0 )		/* MCU */
 	 /*	ROM_LOAD( "4-u59.bin", 0x00000, 0x00100, NO_DUMP )*/
@@ -2142,7 +2125,6 @@ ROM_START( s1945j )
 
 	ROM_REGION( 0x040000, REGION_USER1, 0 )	/* */
 	ROM_LOAD( "u1.bin",  0x000000, 0x040000, CRC(dee22654) SHA1(5df05b0029ff7b1f7f04b41da7823d2aa8034bd2) )
-
 ROM_END
 
 DRIVER_INIT( s1945 )
@@ -2197,14 +2179,13 @@ Chips:	PS2001B
 ***************************************************************************/
 
 ROM_START( tengai )
-
 	ROM_REGION( 0x100000, REGION_CPU1, 0 )		/* Main CPU Code */
 	ROM_LOAD32_WORD_SWAP( "2-u40.bin", 0x000000, 0x080000, CRC(ab6fe58a) SHA1(6687a3af192b3eab60d75ca286ebb8e0636297b5) ) /* 1&0*/
 	ROM_LOAD32_WORD_SWAP( "3-u41.bin", 0x000002, 0x080000, CRC(02e42e39) SHA1(6cdb7b1cebab50c0a44cd60cd437f0e878ccac5c) ) /* 3&2*/
 
 	ROM_REGION( 0x030000, REGION_CPU2, 0 )		/* Sound CPU Code */
 	ROM_LOAD( "1-u63.bin", 0x00000, 0x20000, CRC(2025e387) SHA1(334b0eb3b416d46ccaadff3eee6f1abba63285fb) )
-	ROM_RELOAD(            0x10000, 0x20000             )
+	ROM_RELOAD(            0x10000, 0x20000 )
 
 	ROM_REGION( 0x000100, REGION_CPU3, 0 )		/* MCU */
 	/*	ROM_LOAD( "4-u59.bin", 0x00000, 0x00100, NO_DUMP )*/
@@ -2223,7 +2204,6 @@ ROM_START( tengai )
 
 	ROM_REGION( 0x040000, REGION_USER1, 0 )	/* Sprites LUT */
 	ROM_LOAD( "u1.bin",  0x000000, 0x040000, CRC(681d7d55) SHA1(b0b28471440d747adbc4d22d1918f89f6ede1615) )
-
 ROM_END
 
 ROM_START( tengaik )
@@ -2269,7 +2249,6 @@ DRIVER_INIT( tengai )
 	psikyo_ka302c_banking = 0; /* Banking is controlled by mcu*/
 }
 
-
 /***************************************************************************
 
 
@@ -2279,16 +2258,16 @@ DRIVER_INIT( tengai )
 ***************************************************************************/
 
 /* Working Games */
-GAME ( 1993, samuraia, 0,        sngkace,  samuraia, sngkace,  ROT270, "Psikyo", "Samurai Aces (World)"  ) /* Banpresto?*/
-GAME ( 1993, sngkace,  samuraia, sngkace,  sngkace,  sngkace,  ROT270, "Psikyo", "Sengoku Ace (Japan)"   ) /* Banpresto?*/
-GAME ( 1993, sngkacek, samuraia, sngkace,  sngkace,  sngkace,  ROT270, "Psikyo", "Sengoku Ace (Korean Translation)" ) /* Banpresto?*/
-GAME ( 1994, gunbird,  0,        gunbird,  gunbird,  gunbird,  ROT270, "Psikyo", "Gunbird (World)"      )
-GAME ( 1994, gunbirdk, gunbird,  gunbird,  gunbirdj, gunbird,  ROT270, "Psikyo", "Gunbird (Korea)"      )
-GAME ( 1994, gunbirdj, gunbird,  gunbird,  gunbirdj, gunbird,  ROT270, "Psikyo", "Gunbird (Japan)"      )
-GAME ( 1994, gunbirdka,gunbird,  gunbird,  gunbirdj, gunbird,  ROT270, "Psikyo", "Gunbird (Korean Translation)" )
-GAME ( 1994, btlkroad, 0,        gunbird,  btlkroad, gunbird,  ROT0,   "Psikyo", "Battle K-Road" )
-GAME ( 1995, s1945,    0,        s1945,    s1945,    s1945,    ROT270, "Psikyo", "Strikers 1945" )
-GAME ( 1995, s1945j,   s1945,    s1945,    s1945j,   s1945j,   ROT270, "Psikyo", "Strikers 1945 (Japan)" )
-GAME ( 1995, s1945jn,  s1945,    gunbird,  s1945j,   s1945jn,  ROT270, "Psikyo", "Strikers 1945 (Japan, unprotected)" )
-GAME ( 1996, tengai,   0,        s1945,    tengai,   tengai,   ROT0,   "Psikyo", "Tengai - Sengoku Blade - Sengoku Ace Episode II" )
-GAME ( 1996, tengaik,  tengai,   s1945,    tengaik,  tengai,   ROT0,   "Psikyo", "Sengoku Blade - Sengoku Ace Episode II (Korean Translation)" )
+GAME ( 1993, samuraia,  0,        sngkace,  samuraia, sngkace,  ROT270, "Psikyo", "Samurai Aces (World)" ) /* Banpresto?*/
+GAME ( 1993, sngkace,   samuraia, sngkace,  sngkace,  sngkace,  ROT270, "Psikyo", "Sengoku Ace (Japan)" ) /* Banpresto?*/
+GAME ( 1993, sngkacek,  samuraia, sngkace,  sngkace,  sngkace,  ROT270, "Psikyo", "Sengoku Ace (Korean Translation)" ) /* Banpresto?*/
+GAME ( 1994, gunbird,   0,        gunbird,  gunbird,  gunbird,  ROT270, "Psikyo", "Gunbird (World)" )
+GAME ( 1994, gunbirdk,  gunbird,  gunbird,  gunbirdj, gunbird,  ROT270, "Psikyo", "Gunbird (Korea)" )
+GAME ( 1994, gunbirdj,  gunbird,  gunbird,  gunbirdj, gunbird,  ROT270, "Psikyo", "Gunbird (Japan)" )
+GAME ( 1994, gunbirdka, gunbird,  gunbird,  gunbirdj, gunbird,  ROT270, "Psikyo", "Gunbird (Korean Translation)" )
+GAME ( 1994, btlkroad,  0,        gunbird,  btlkroad, gunbird,  ROT0,   "Psikyo", "Battle K-Road" )
+GAME ( 1995, s1945,     0,        s1945,    s1945,    s1945,    ROT270, "Psikyo", "Strikers 1945" )
+GAME ( 1995, s1945j,    s1945,    s1945,    s1945j,   s1945j,   ROT270, "Psikyo", "Strikers 1945 (Japan)" )
+GAME ( 1995, s1945jn,   s1945,    gunbird,  s1945j,   s1945jn,  ROT270, "Psikyo", "Strikers 1945 (Japan, unprotected)" )
+GAME ( 1996, tengai,    0,        s1945,    tengai,   tengai,   ROT0,   "Psikyo", "Tengai - Sengoku Blade - Sengoku Ace Episode II" )
+GAME ( 1996, tengaik,   tengai,   s1945,    tengaik,  tengai,   ROT0,   "Psikyo", "Sengoku Blade - Sengoku Ace Episode II (Korean Translation)" )

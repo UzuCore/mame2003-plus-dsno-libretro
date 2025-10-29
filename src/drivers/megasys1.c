@@ -3752,7 +3752,7 @@ GAME( 1991, 64street, 0,        system_C,          64street, 64street, ROT0,   "
 GAME( 1991, 64streej, 64street, system_C,          64street, 64street, ROT0,   "Jaleco", "64th. Street - A Detective Story (Japan)" )
 GAME( 1992, soldamj,  0,        system_A,          soldamj,  soldam,   ROT0,   "Jaleco", "Soldam (Japan)" )
 GAME( 1992, bigstrik, 0,        system_C,          bigstrik, bigstrik, ROT0,   "Jaleco", "Big Striker" )
-GAME( 1993, chimerab, 0,        system_C         , chimerab, chimerab, ROT0,   "Jaleco", "Chimera Beast (prototype)" )
+GAME( 1993, chimerab, 0,        system_C,          chimerab, chimerab, ROT0,   "Jaleco", "Chimera Beast (prototype)" )
 GAME( 1993, cybattlr, 0,        system_C,          cybattlr, cybattlr, ROT90,  "Jaleco", "Cybattler" )
 GAME( 1993, peekaboo, 0,        system_D,          peekaboo, peekaboo, ROT0,   "Jaleco", "Peek-a-Boo!" )
 GAME( 1991, inyourfa, 0,        system_A,          inyourfa, iganinju, ROT0,   "Jaleco", "In Your Face (US, prototype)" )
