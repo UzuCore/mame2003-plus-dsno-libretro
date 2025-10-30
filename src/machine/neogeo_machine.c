@@ -416,7 +416,7 @@ static WRITE16_HANDLER( garou_bankswitch_w )
 }
 
 
-static WRITE16_HANDLER( garouo_bankswitch_w )
+static WRITE16_HANDLER( garouh_bankswitch_w )
 {
 	/* thanks to Razoola and Mr K for the info */
 	int bankaddress;
@@ -453,7 +453,6 @@ static WRITE16_HANDLER( garouo_bankswitch_w )
 
 	neogeo_set_cpu1_second_bank(bankaddress);
 }
-
 
 static WRITE16_HANDLER( mslug3_bankswitch_w )
 {
@@ -540,7 +539,7 @@ static void neogeo_custom_memory(void)
 	/* the game hangs after a while without this patch */
 		install_mem_read16_handler(0, 0x104fbc, 0x104fbd, popbounc_sfix_16_r);
 
-	if (!strcmp(Machine->gamedrv->name,"kof99") || !strcmp(Machine->gamedrv->name,"kof99a") || !strcmp(Machine->gamedrv->name,"kof99e"))
+	if (!strcmp(Machine->gamedrv->name,"kof99") || !strcmp(Machine->gamedrv->name,"kof99h") || !strcmp(Machine->gamedrv->name,"kof99e") || !strcmp(Machine->gamedrv->name,"kof99k"))
 	{
 		/* special ROM banking handler */
 		install_mem_write16_handler(0, 0x2ffff0, 0x2ffff1, kof99_bankswitch_w);
@@ -558,10 +557,10 @@ static void neogeo_custom_memory(void)
 		install_mem_read16_handler(0, 0x2fe446, 0x2fe447, prot_9a37_r);
 	}
 
-	if (!strcmp(Machine->gamedrv->name,"garouo"))
+	if (!strcmp(Machine->gamedrv->name,"garouh"))
 	{
 		/* special ROM banking handler */
-		install_mem_write16_handler(0, 0x2fffc0, 0x2fffc1, garouo_bankswitch_w);
+		install_mem_write16_handler(0, 0x2fffc0, 0x2fffc1, garouh_bankswitch_w);
 
 		/* additional protection */
 		install_mem_read16_handler(0, 0x2fe446, 0x2fe447, prot_9a37_r);
@@ -590,65 +589,85 @@ static void neogeo_custom_memory(void)
 	sram_protection_hack = ~0;
 	if (	!strcmp(Machine->gamedrv->name,"fatfury3") ||
 			!strcmp(Machine->gamedrv->name,"samsho5") ||
+			!strcmp(Machine->gamedrv->name,"samsho5a") ||
+			!strcmp(Machine->gamedrv->name,"samsho5h") ||
 			!strcmp(Machine->gamedrv->name,"samsho5uh") ||
 			!strcmp(Machine->gamedrv->name,"samsh5sp") ||
 			!strcmp(Machine->gamedrv->name,"samsh5spuh") ||
 			!strcmp(Machine->gamedrv->name,"samsho3") ||
+			!strcmp(Machine->gamedrv->name,"samsho3h") ||
+			!strcmp(Machine->gamedrv->name,"fswords") ||
 			!strcmp(Machine->gamedrv->name,"samsho3uh") ||
 			!strcmp(Machine->gamedrv->name,"samsho3k") ||
 			!strcmp(Machine->gamedrv->name,"samsho4") ||
+			!strcmp(Machine->gamedrv->name,"samsho4k") ||
 			!strcmp(Machine->gamedrv->name,"samsho4uh") ||
 			!strcmp(Machine->gamedrv->name,"aof3") ||
+			!strcmp(Machine->gamedrv->name,"aof3k") ||
 			!strcmp(Machine->gamedrv->name,"aof3uh") ||
 			!strcmp(Machine->gamedrv->name,"rbff1") ||
+			!strcmp(Machine->gamedrv->name,"rbff1a") ||
+			!strcmp(Machine->gamedrv->name,"rbff1k") ||
+			!strcmp(Machine->gamedrv->name,"rbff1ka") ||
 			!strcmp(Machine->gamedrv->name,"rbff1uh") ||
 			!strcmp(Machine->gamedrv->name,"rbff1kr") ||
 			!strcmp(Machine->gamedrv->name,"rbff1akr") ||
 			!strcmp(Machine->gamedrv->name,"rbffspec") ||
+			!strcmp(Machine->gamedrv->name,"rbffspeck") ||
 			!strcmp(Machine->gamedrv->name,"rbffspecuh") ||
 			!strcmp(Machine->gamedrv->name,"kof95") ||
-			!strcmp(Machine->gamedrv->name,"kof95k") ||
+			!strcmp(Machine->gamedrv->name,"kof95a") ||
+			!strcmp(Machine->gamedrv->name,"kof95h") ||
+			!strcmp(Machine->gamedrv->name,"kof95kr") ||
 			!strcmp(Machine->gamedrv->name,"kof95uh") ||
 			!strcmp(Machine->gamedrv->name,"kof96") ||
+			!strcmp(Machine->gamedrv->name,"kof96a") ||
 			!strcmp(Machine->gamedrv->name,"kof96h") ||
-			!strcmp(Machine->gamedrv->name,"kof96k") ||
+			!strcmp(Machine->gamedrv->name,"kof96kr") ||
 			!strcmp(Machine->gamedrv->name,"kof97") ||
-			!strcmp(Machine->gamedrv->name,"kof97a") ||
+			!strcmp(Machine->gamedrv->name,"kof97h") ||
 			!strcmp(Machine->gamedrv->name,"kof97k") ||
+			!strcmp(Machine->gamedrv->name,"kof97kr") ||
 			!strcmp(Machine->gamedrv->name,"kof97uh") ||
 			!strcmp(Machine->gamedrv->name,"kof97pls") ||
 			!strcmp(Machine->gamedrv->name,"kog") ||
 			!strcmp(Machine->gamedrv->name,"kof98") ||
-			!strcmp(Machine->gamedrv->name,"kof98n") ||
+			!strcmp(Machine->gamedrv->name,"kof98a") ||
 			!strcmp(Machine->gamedrv->name,"kof98k") ||
+			!strcmp(Machine->gamedrv->name,"kof98ka") ||
+			!strcmp(Machine->gamedrv->name,"kof98h") ||
 			!strcmp(Machine->gamedrv->name,"kof98kr") ||
 			!strcmp(Machine->gamedrv->name,"kof98uh") ||
 			!strcmp(Machine->gamedrv->name,"kof99") ||
-			!strcmp(Machine->gamedrv->name,"kof99a") ||
+			!strcmp(Machine->gamedrv->name,"kof99h") ||
 			!strcmp(Machine->gamedrv->name,"kof99e") ||
-			!strcmp(Machine->gamedrv->name,"kof99n") ||
-			!strcmp(Machine->gamedrv->name,"kof99p") ||
 			!strcmp(Machine->gamedrv->name,"kof99k") ||
+			!strcmp(Machine->gamedrv->name,"kof99ka") ||
+			!strcmp(Machine->gamedrv->name,"kof99p") ||
+			!strcmp(Machine->gamedrv->name,"kof99kr") ||
 			!strcmp(Machine->gamedrv->name,"kof99uh") ||
 			!strcmp(Machine->gamedrv->name,"kof2000") ||
 			!strcmp(Machine->gamedrv->name,"kof2000n") ||
-			!strcmp(Machine->gamedrv->name,"kof2000k") ||
+			!strcmp(Machine->gamedrv->name,"kof2kkr") ||
 			!strcmp(Machine->gamedrv->name,"kof2kuh") ||
 			!strcmp(Machine->gamedrv->name,"kizuna") ||
 			!strcmp(Machine->gamedrv->name,"lastblad") ||
-			!strcmp(Machine->gamedrv->name,"lastblda") ||
+			!strcmp(Machine->gamedrv->name,"lastbladh") ||
+			!strcmp(Machine->gamedrv->name,"lastsold") ||
 			!strcmp(Machine->gamedrv->name,"lastbld2") ||
 			!strcmp(Machine->gamedrv->name,"rbff2") ||
-			!strcmp(Machine->gamedrv->name,"rbff2a") ||
+			!strcmp(Machine->gamedrv->name,"rbff2h") ||
+			!strcmp(Machine->gamedrv->name,"rbff2k") ||
 			!strcmp(Machine->gamedrv->name,"rbff2uh") ||
 			!strcmp(Machine->gamedrv->name,"mslug2") ||
 			!strcmp(Machine->gamedrv->name,"mslug2uh") ||
 			!strcmp(Machine->gamedrv->name,"mslug2t") ||
 			!strcmp(Machine->gamedrv->name,"mslug3") ||
-			!strcmp(Machine->gamedrv->name,"mslug3n") ||
+			!strcmp(Machine->gamedrv->name,"mslug3h") ||
 			!strcmp(Machine->gamedrv->name,"mslug3uh") ||
 			!strcmp(Machine->gamedrv->name,"garou") ||
-			!strcmp(Machine->gamedrv->name,"garouo") ||
+			!strcmp(Machine->gamedrv->name,"garouh") ||
+			!strcmp(Machine->gamedrv->name,"garouha") ||
 			!strcmp(Machine->gamedrv->name,"garoup"))
 		sram_protection_hack = 0x100/2;
 
@@ -690,7 +709,7 @@ static void neogeo_custom_memory(void)
 		mem16[0x0000/2] = 0x0010;
 	}
 
-	if (!strcmp(Machine->gamedrv->name,"mslugx"))
+	if ((!strcmp(Machine->gamedrv->name,"mslugx")) || (!strcmp(Machine->gamedrv->name,"mslugxuh")))
 	{
 		/* patch out protection checks */
 		int i;

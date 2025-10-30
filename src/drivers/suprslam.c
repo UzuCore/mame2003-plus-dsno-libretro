@@ -502,5 +502,5 @@ ROM_END
 
 /*** GAME DRIVERS ************************************************************/
 
-GAMEX( 1995, suprslam, 0, suprslam, suprslam, 0, ROT0, "Banpresto / Toei Animation", "Super Slams", GAME_IMPERFECT_GRAPHICS )
+GAMEX( 1995, suprslam,  0,        suprslam, suprslam,  0, ROT0, "Banpresto / Toei Animation", "From TV Animation Slam Dunk - Super Slams", GAME_IMPERFECT_GRAPHICS )
 GAMEX( 1995, suprslamk, suprslam, suprslam, suprslamk, 0, ROT0, "Banpresto / Toei Animation", "From TV Animation Slam Dunk - Super Slams (Korean Translation)", GAME_IMPERFECT_GRAPHICS )
