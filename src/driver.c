@@ -5962,6 +5962,7 @@ Other Sun games
 	DRIVER( roboarmy )	/* 0032 (c) 1991 SNK */
 	DRIVER( roboarmya )	/* 0032 (c) 1991 SNK */
 	DRIVER( fatfury1 )	/* 0033 (c) 1991 SNK */
+	DRIVER( fatfury1k )	/* 0033 (c) 2025 (Korean Translation) SNK */
 	DRIVER( fbfrenzy )	/* 0034 (c) 1992 SNK */
 	/* 0035 Mystic Wand (prototype) 1991 Alpha */
 	DRIVER( bakatono )	/* 0036 (c) 1991 Monolith Corp. */
@@ -5971,6 +5972,7 @@ Other Sun games
 	DRIVER( kotm2 )		/* 0039 (c) 1992 SNK */
 	DRIVER( kotm2a )	/* 0039 (c) 1992 SNK */
 	DRIVER( kotm2p )	/* 0039 (c) 1992 SNK */
+	DRIVER( kotm2k )	/* 0039 (c) 2025 (Korean Translation) SNK */
 	DRIVER( sengoku2 )	/* 0040 (c) 1993 SNK */
 	DRIVER( bstars2 )	/* 0041 (c) 1992 SNK */
 	DRIVER( quizdai2 )	/* 0042 (c) 1992 SNK */
