@@ -5910,6 +5910,7 @@ Other Sun games
 	/* info on prototypes taken from http://www.members.tripod.com/fresa/proto/puzzle.htm */
 	DRIVER( nam1975 )	/* 0001 (c) 1990 SNK */
 	DRIVER( bstars )	/* 0002 (c) 1990 SNK */
+	DRIVER( bstarsh )	/* 0002 (c) 1990 SNK */
 	DRIVER( tpgolf )	/* 0003 (c) 1990 SNK */
 	DRIVER( mahretsu )	/* 0004 (c) 1990 SNK */
 	DRIVER( maglord )	/* 0005 (c) 1990 Alpha Denshi Co. */
@@ -5918,8 +5919,10 @@ Other Sun games
 	DRIVER( ridhero )	/* 0006 (c) 1990 SNK */
 	DRIVER( ridheroh )	/* 0006 (c) 1990 SNK */
 	DRIVER( alpham2 )	/* 0007 (c) 1991 SNK */
+	DRIVER( alpham2p )	/* 0007 (c) 1991 SNK */
 	/* 0008 Sunshine (prototype) 1990 SNK */
 	DRIVER( ncombat )	/* 0009 (c) 1990 Alpha Denshi Co. */
+	DRIVER( ncombath )	/* 0009 (c) 1990 Alpha Denshi Co. */
 	DRIVER( cyberlip )	/* 0010 (c) 1990 SNK */
 	DRIVER( superspy )	/* 0011 (c) 1990 SNK */
 	/* 0012 */
@@ -5929,25 +5932,37 @@ Other Sun games
 	DRIVER( kotm )		/* 0016 (c) 1991 SNK */
 	DRIVER( kotmh )		/* 0016 (c) 1991 SNK */
 	DRIVER( sengoku )	/* 0017 (c) 1991 SNK */
-	DRIVER( sengokh )	/* 0017 (c) 1991 SNK */
+	DRIVER( sengokuh )	/* 0017 (c) 1991 SNK */
 	DRIVER( burningf )	/* 0018 (c) 1991 SNK */
-	DRIVER( burningh )	/* 0018 (c) 1991 SNK */
+	DRIVER( burningfh )	/* 0018 (c) 1991 SNK */
+	DRIVER( burningfpa )	/* 0018 (c) 1991 SNK */
+	DRIVER( burningfpb )	/* 0018 (c) 1991 SNK */
+	DRIVER( burningfp )	/* 0018 (c) 1991 SNK */
 	DRIVER( lbowling )	/* 0019 (c) 1990 SNK */
 	DRIVER( gpilots )	/* 0020 (c) 1991 SNK */
+	DRIVER( gpilotsh )	/* 0020 (c) 1991 SNK */
+	DRIVER( gpilotsp )	/* 0020 (c) 1991 SNK */
 	DRIVER( joyjoy )	/* 0021 (c) 1990 SNK */
 	DRIVER( bjourney )	/* 0022 (c) 1990 Alpha Denshi Co. */
+	DRIVER( bjourneyh )	/* 0022 (c) 1990 Alpha Denshi Co. */
 	DRIVER( quizdais )	/* 0023 (c) 1991 SNK */
+	DRIVER( quizdaisk )	/* 0023 (c) 1991 SNK */
 	DRIVER( lresort )	/* 0024 (c) 1992 SNK */
+	DRIVER( lresortp )	/* 0024 (c) 1992 SNK */
 	DRIVER( eightman )	/* 0025 (c) 1991 SNK / Pallas */
 	/* 0026 Fun Fun Brothers (prototype) 1991 Alpha */
 	DRIVER( minasan )	/* 0027 (c) 1990 Monolith Corp. */
 	/* 0028 Dunk Star (prototype) Sammy */
 	DRIVER( legendos )	/* 0029 (c) 1991 SNK */
 	DRIVER( 2020bb )	/* 0030 (c) 1991 SNK / Pallas */
+	DRIVER( 2020bba )	/* 0030 (c) 1991 SNK / Pallas */
 	DRIVER( 2020bbh )	/* 0030 (c) 1991 SNK / Pallas */
 	DRIVER( socbrawl )	/* 0031 (c) 1991 SNK */
+	DRIVER( socbrawlh )	/* 0031 (c) 1991 SNK */
 	DRIVER( roboarmy )	/* 0032 (c) 1991 SNK */
+	DRIVER( roboarmya )	/* 0032 (c) 1991 SNK */
 	DRIVER( fatfury1 )	/* 0033 (c) 1991 SNK */
+	DRIVER( fatfury1k )	/* 0033 (c) 2025 (Korean Translation) SNK */
 	DRIVER( fbfrenzy )	/* 0034 (c) 1992 SNK */
 	/* 0035 Mystic Wand (prototype) 1991 Alpha */
 	DRIVER( bakatono )	/* 0036 (c) 1991 Monolith Corp. */
@@ -5955,6 +5970,9 @@ Other Sun games
 	DRIVER( crswordk )	/* 0037 (c) 2025 (Korean Translation) Alpha Denshi Co. */
 	DRIVER( trally )	/* 0038 (c) 1991 Alpha Denshi Co. */
 	DRIVER( kotm2 )		/* 0039 (c) 1992 SNK */
+	DRIVER( kotm2a )	/* 0039 (c) 1992 SNK */
+	DRIVER( kotm2p )	/* 0039 (c) 1992 SNK */
+	DRIVER( kotm2k )	/* 0039 (c) 2025 (Korean Translation) SNK */
 	DRIVER( sengoku2 )	/* 0040 (c) 1993 SNK */
 	DRIVER( bstars2 )	/* 0041 (c) 1992 SNK */
 	DRIVER( quizdai2 )	/* 0042 (c) 1992 SNK */
@@ -5962,9 +5980,11 @@ Other Sun games
 	DRIVER( aof )		/* 0044 (c) 1992 SNK */
 	DRIVER( aofk )		/* 0044 (c) 2016 (Korean Translation) SNK */
 	DRIVER( samsho )	/* 0045 (c) 1993 SNK */
+	DRIVER( samshoh )	/* 0045 (c) 1993 SNK */
 	DRIVER( samshok )	/* 0045 (c) 2025 (Korean Translation) SNK */
 	DRIVER( samshouh )	/* 0045 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( tophuntr )	/* 0046 (c) 1994 SNK */
+	DRIVER( tophuntrh )	/* 0046 (c) 1994 SNK */
 	DRIVER( tophuntrk )	/* 0046 (c) 2006 (Korean Translation) SNK */
 	DRIVER( fatfury2 )	/* 0047 (c) 1992 SNK */
 	DRIVER( fatfury2k )	/* 0047 (c) 2025 (Korean Translation) SNK */
@@ -5973,29 +5993,35 @@ Other Sun games
 	DRIVER( ncommand )	/* 0050 (c) 1992 Alpha Denshi Co. */
 	DRIVER( ncommandk )	/* 0050 (c) 2025 (Korean Translation) Alpha Denshi Co. */
 	DRIVER( viewpoin )	/* 0051 (c) 1992 Sammy */
+	DRIVER( viewpoinp )	/* 0051 (c) 1992 Sammy */
 	DRIVER( ssideki )	/* 0052 (c) 1992 SNK */
 	DRIVER( wh1 )		/* 0053 (c) 1992 Alpha Denshi Co. */
 	DRIVER( wh1h )		/* 0053 (c) 1992 Alpha Denshi Co. */
+	DRIVER( wh1ha )		/* 0053 (c) 1992 Alpha Denshi Co. */
 	DRIVER( wh1k )		/* 0053 (c) 2025 (Korean Translation) Alpha Denshi Co. */
 	DRIVER( crswd2bl )  /* 0054 Crossed Swords 2  (CD only? not confirmed, MVS might exist) */
 	DRIVER( kof94 )		/* 0055 (c) 1994 SNK */
-	DRIVER( kof94k )	/* 0055 (c) 2006 (Korean Translation) SNK */
+	DRIVER( kof94kr )	/* 0055 (c) 2006 (Korean Translation) SNK */
 	DRIVER( kof94uh )	/* 0055 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( aof2 )		/* 0056 (c) 1994 SNK */
+	DRIVER( aof2a )		/* 0056 (c) 1994 SNK */
 	DRIVER( wh2 )		/* 0057 (c) 1993 ADK */
+	DRIVER( wh2h )		/* 0057 (c) 1993 ADK */
 	DRIVER( fatfursp )	/* 0058 (c) 1993 SNK */
-	DRIVER( fatfursa )	/* 0058 (c) 1993 SNK */
+	DRIVER( fatfurspa )	/* 0058 (c) 1993 SNK */
 	DRIVER( savagere )	/* 0059 (c) 1995 SNK */
 	DRIVER( fightfev )	/* 0060 (c) 1994 Viccom */
-	DRIVER( fightfva )	/* 0060 (c) 1994 Viccom */
+	DRIVER( fightfeva )	/* 0060 (c) 1994 Viccom */
 	DRIVER( ssideki2 )	/* 0061 (c) 1994 SNK */
 	DRIVER( spinmast )	/* 0062 (c) 1993 Data East Corporation */
 	DRIVER( spinmastk )	/* 0062 (c) 2025 (Korean Translation) Data East Corporation */
 	DRIVER( samsho2 )	/* 0063 (c) 1994 SNK */
+	DRIVER( samsho2k )	/* 0063 (c) 1994 SNK */
+	DRIVER( samsho2ka )	/* 0063 (c) 1994 SNK */
 	DRIVER( samsho2uh )	/* 0063 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( wh2j )		/* 0064 (c) 1994 ADK / SNK */
 	DRIVER( wjammers )	/* 0065 (c) 1994 Data East Corporation */
-	DRIVER( wjammerk )	/* 0065 (c) 2005 (Korean Translation) Data East Corporation */
+	DRIVER( wjammersk )	/* 0065 (c) 2005 (Korean Translation) Data East Corporation */
 	DRIVER( karnovr )	/* 0066 (c) 1994 Data East Corporation */
 	DRIVER( gururin )	/* 0067 (c) 1994 Face */
 	DRIVER( pspikes2 )	/* 0068 (c) 1994 Video System Co. */
@@ -6012,17 +6038,20 @@ Other Sun games
 	DRIVER( strhoop )	/* 0079 (c) 1994 Data East Corporation */
 	DRIVER( strhoopk )	/* 0079 (c) 2025 (Korean Translation) Data East Corporation */
 	DRIVER( quizkof )	/* 0080 (c) 1995 Saurus */
+	DRIVER( quizkofk )	/* 0080 (c) 1995 Saurus */
 	DRIVER( ssideki3 )	/* 0081 (c) 1995 SNK */
 	DRIVER( doubledr )	/* 0082 (c) 1995 Technos */
 	DRIVER( pbobblen )	/* 0083 (c) 1994 Taito */
-	DRIVER( pbobblna )	/* 0083 (c) 1994 Taito */
 	DRIVER( kof95 )		/* 0084 (c) 1995 SNK */
 	DRIVER( kof95a )	/* 0084 (c) 1995 SNK */
-	DRIVER( kof95k )	/* 0084 (c) 2005 (Korean Translation) SNK */
+	DRIVER( kof95h )	/* 0084 (c) 1995 SNK */
+	DRIVER( kof95kr )	/* 0084 (c) 2005 (Korean Translation) SNK */
 	DRIVER( kof95uh )	/* 0084 (c) 2024 (AES Uncensored Hack) SNK */
 	/* 0085 Shinsetsu Samurai Spirits Bushidoretsuden / Samurai Shodown RPG (CD only) */
 	DRIVER( tws96 )		/* 0086 (c) 1996 Tecmo */
 	DRIVER( samsho3 )	/* 0087 (c) 1995 SNK */
+	DRIVER( samsho3h )	/* 0087 (c) 1995 SNK */
+	DRIVER( fswords )	/* 0087 (c) 1995 SNK */
 	DRIVER( samsho3uh )	/* 0087 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( samsho3k )	/* 0087 (c) 2025 (Korean Translation) SNK */
 	DRIVER( stakwin )	/* 0088 (c) 1995 Saurus */
@@ -6033,19 +6062,23 @@ Other Sun games
 	DRIVER( neobombe )	/* 0093 (c) 1997 Hudson */
 	DRIVER( gowcaizr )	/* 0094 (c) 1995 Technos */
 	DRIVER( rbff1 )		/* 0095 (c) 1995 SNK */
+	DRIVER( rbff1a )	/* 0095 (c) 1995 SNK */
+	DRIVER( rbff1k )	/* 0095 (c) 1995 SNK */
+	DRIVER( rbff1ka )	/* 0095 (c) 1995 SNK */
 	DRIVER( rbff1uh )	/* 0095 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( rbff1kr )	/* 0095 (c) 2025 (Korean Translation) SNK */
 	DRIVER( rbff1akr )	/* 0095 (c) 2025 (Korean Translation, Bug Fix Revision) SNK */
 	DRIVER( aof3 )		/* 0096 (c) 1996 SNK */
+	DRIVER( aof3k )		/* 0096 (c) 1996 SNK */
 	DRIVER( aof3uh )	/* 0096 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( sonicwi3 )	/* 0097 (c) 1995 Video System Co. */
-	/* 0098 Idol Mahjong - final romance 2 (CD only? not confirmed, MVS might exist) */
+	DRIVER( froman2b )	/* 0098 (c) 1995 Video System Co. */
 	/* 0099 Neo Pool Masters */
 	DRIVER( turfmast )	/* 0200 (c) 1996 Nazca */
 	DRIVER( mslug )		/* 0201 (c) 1996 Nazca */
 	DRIVER( msluguh )	/* 0201 (c) 2024 (AES Uncensored Hack) Nazca */
 	DRIVER( puzzledp )	/* 0202 (c) 1995 Taito (Visco license) */
-	DRIVER( puzzldpk )	/* 0202 (c) 2006 (Korean Translation) Taito (Visco license) */
+	DRIVER( puzzledpk )	/* 0202 (c) 2006 (Korean Translation) Taito (Visco license) */
 	DRIVER( mosyougi )	/* 0203 (c) 1995 ADK / SNK */
 	/* 0204 QP (prototype) */
 	/* 0205 Neo-Geo CD Special (CD only) */
@@ -6058,18 +6091,22 @@ Other Sun games
 	DRIVER( overtop )	/* 0212 (c) 1996 ADK */
 	DRIVER( neodrift )	/* 0213 (c) 1996 Visco */
 	DRIVER( kof96 )		/* 0214 (c) 1996 SNK */
+	DRIVER( kof96a )		/* 0214 (c) 1996 SNK */
 	DRIVER( kof96h )	/* 0214 (c) 1996 SNK */
-	DRIVER( kof96k )	/* 0214 (c) 2006 (Korean Translation) SNK */
+	DRIVER( kof96kr )	/* 0214 (c) 2006 (Korean Translation) SNK */
 	DRIVER( ssideki4 )	/* 0215 (c) 1996 SNK */
 	DRIVER( kizuna )	/* 0216 (c) 1996 SNK */
 	DRIVER( ninjamas )	/* 0217 (c) 1996 ADK / SNK */
 	DRIVER( ragnagrd )	/* 0218 (c) 1996 Saurus */
 	DRIVER( pgoal )		/* 0219 (c) 1996 Saurus */
-	DRIVER( ironclad )  /* 0220 Choutetsu Brikin'ger - iron clad (prototype) 1996 Saurus */
+	DRIVER( ironclad )	/* 0220 Choutetsu Brikin'ger - iron clad (prototype) 1996 Saurus */
+	DRIVER( ironclado )	/* 0220 Choutetsu Brikin'ger - iron clad (prototype) 1996 Saurus */
 	DRIVER( magdrop2 )	/* 0221 (c) 1996 Data East Corporation */
 	DRIVER( samsho4 )	/* 0222 (c) 1996 SNK */
+	DRIVER( samsho4k )	/* 0222 (c) 1996 SNK */
 	DRIVER( samsho4uh )	/* 0222 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( rbffspec )	/* 0223 (c) 1996 SNK */
+	DRIVER( rbffspeck )	/* 0223 (c) 1996 SNK */
 	DRIVER( rbffspecuh )	/* 0223 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( twinspri )	/* 0224 (c) 1996 ADK */
 	DRIVER( wakuwak7 )	/* 0225 (c) 1996 Sunsoft */
@@ -6081,90 +6118,106 @@ Other Sun games
 	DRIVER( breakers )	/* 0230 (c) 1996 Visco */
 	DRIVER( miexchng )	/* 0231 (c) 1997 Face */
 	DRIVER( kof97 )		/* 0232 (c) 1997 SNK */
-	DRIVER( kof97a )	/* 0232 (c) 1997 SNK */
-	DRIVER( kof97k )	/* 0232 (c) 2005 (Korean Translation) SNK */
+	DRIVER( kof97h )	/* 0232 (c) 1997 SNK */
+	DRIVER( kof97k )	/* 0232 (c) 1997 SNK */
+	DRIVER( kof97kr )	/* 0232 (c) 2005 (Korean Translation) SNK */
 	DRIVER( kof97uh )	/* 0232 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( kof97pls )	/* bootleg of kof97 */
 	DRIVER( kog )		/* bootleg of kof97 */
 	DRIVER( magdrop3 )	/* 0233 (c) 1997 Data East Corporation */
 	DRIVER( lastblad )	/* 0234 (c) 1997 SNK */
-	DRIVER( lastblda )	/* 0234 (c) 1997 SNK */
+	DRIVER( lastbladh )	/* 0234 (c) 1997 SNK */
+	DRIVER( lastsold )	/* 0234 (c) 1997 SNK */
 	DRIVER( puzzldpr )	/* 0235 (c) 1997 Taito (Visco license) */
-	DRIVER( puzzldrk )	/* 0235 (c) 2006 (Korean Translation) Taito (Visco license) */
+	DRIVER( puzzldprk )	/* 0235 (c) 2006 (Korean Translation) Taito (Visco license) */
 	DRIVER( irrmaze )	/* 0236 (c) 1997 SNK / Saurus */
 	DRIVER( popbounc )	/* 0237 (c) 1997 Video System Co. */
 	DRIVER( shocktro )	/* 0238 (c) 1997 Saurus */
-	DRIVER( shocktra )	/* 0238 (c) 1997 Saurus */
+	DRIVER( shocktroa )	/* 0238 (c) 1997 Saurus */
 	DRIVER( blazstar )	/* 0239 (c) 1998 Yumekobo */
 	DRIVER( rbff2 )		/* 0240 (c) 1998 SNK */
-	DRIVER( rbff2a )	/* 0240 (c) 1998 SNK */
+	DRIVER( rbff2h )	/* 0240 (c) 1998 SNK */
+	DRIVER( rbff2k )	/* 0240 (c) 1998 SNK */
 	DRIVER( rbff2uh )	/* 0240 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( mslug2 )	/* 0241 (c) 1998 SNK */
 	DRIVER( mslug2uh )	/* 0241 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( mslug2t )	/* 0941 (c) 2015 Trap15 Hack */
 	DRIVER( kof98 )		/* 0242 (c) 1998 SNK */
-	DRIVER( kof98n )	/* 0242 (c) 1998 SNK */
+	DRIVER( kof98a )	/* 0242 (c) 1998 SNK */
 	DRIVER( kof98k )	/* 0242 (c) 1998 SNK */
+	DRIVER( kof98ka )	/* 0242 (c) 1998 SNK */
+	DRIVER( kof98h )	/* 0242 (c) 1998 SNK */
 	DRIVER( kof98kr )	/* 0242 (c) 2006 (Korean Translation) SNK */
 	DRIVER( kof98uh )	/* 0242 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( lastbld2 )	/* 0243 (c) 1998 SNK */
 	DRIVER( lastbld2uh )	/* 0243 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( neocup98 )	/* 0244 (c) 1998 SNK */
-	DRIVER( neocu98k )	/* 0244 (c) 2006 (Korean Translation) SNK */
+	DRIVER( neocup98k )	/* 0244 (c) 2006 (Korean Translation) SNK */
 	DRIVER( breakrev )	/* 0245 (c) 1998 Visco */
 	DRIVER( shocktr2 )	/* 0246 (c) 1998 Saurus */
 	DRIVER( flipshot )	/* 0247 (c) 1998 Visco */
-	DRIVER( flipshtk )	/* 0247 (c) 2005 (Korean Translation) Visco */
+	DRIVER( flipshotk )	/* 0247 (c) 2005 (Korean Translation) Visco */
 	DRIVER( pbobbl2n )	/* 0248 (c) 1999 Taito (SNK license) */
 	DRIVER( ctomaday )	/* 0249 (c) 1999 Visco */
 	DRIVER( mslugx )	/* 0250 (c) 1999 SNK */
 	DRIVER( mslugxuh )	/* 0250 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( kof99 )		/* 0251 (c) 1999 SNK */
-	DRIVER( kof99a )	/* 0251 (c) 1999 SNK */
+	DRIVER( kof99h )	/* 0251 (c) 1999 SNK */
 	DRIVER( kof99e )	/* 0251 (c) 1999 SNK */
-	DRIVER( kof99n )	/* 0251 (c) 1999 SNK */
+	DRIVER( kof99k )	/* 0251 (c) 1999 SNK */
+	DRIVER( kof99ka )	/* 0251 (c) 1999 SNK */
 	DRIVER( kof99p )	/* 0251 (c) 1999 SNK */
-	DRIVER( kof99k )	/* 0251 (c) 2006 (Korean Translation) SNK */
+	DRIVER( kof99kr )	/* 0251 (c) 2006 (Korean Translation) SNK */
 	DRIVER( kof99uh )	/* 0251 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( ganryu )	/* 0252 (c) 1999 Visco */
 	DRIVER( garou )		/* 0253 (c) 1999 SNK */
-	DRIVER( garouo )	/* 0253 (c) 1999 SNK */
+	DRIVER( garouh )	/* 0253 (c) 1999 SNK */
+	DRIVER( garouha )	/* 0253 (c) 1999 SNK */
 	DRIVER( garoup )	/* 0253 (c) 1999 SNK */
 	DRIVER( s1945p )	/* 0254 (c) 1999 Psikyo */
 	DRIVER( preisle2 )	/* 0255 (c) 1999 Yumekobo */
 	DRIVER( mslug3 )	/* 0256 (c) 2000 SNK */
-	DRIVER( mslug3n )	/* 0256 (c) 2000 SNK */
+	DRIVER( mslug3h )	/* 0256 (c) 2000 SNK */
 	DRIVER( mslug3uh )	/* 0256 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( kof2000 )	/* 0257 (c) 2000 SNK */
 	DRIVER( kof2000n )	/* 0257 (c) 2000 SNK */
-	DRIVER( kof2000k )	/* 0257 (c) 2010 (Korean Translation) SNK */
+	DRIVER( kof2kkr )	/* 0257 (c) 2010 (Korean Translation) SNK */
 	DRIVER( kof2kuh )	/* 0257 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( bangbead )	/* 0259 (c) 2000 Visco */
 	DRIVER( nitd )		/* 0260 (c) 2000 Eleven / Gavaking */
 	DRIVER( sengoku3 )	/* 0261 (c) 2001 SNK */
+	DRIVER( sengoku3a )	/* 0261 (c) 2001 SNK */
 	DRIVER( kof2001 )	/* 0262 (c) 2001 Eolith */
 	DRIVER( kof2001h )	/* 0262 (c) 2001 Eolith */
 	DRIVER( kof2k1uh )	/* 0262 (c) 2024 (AES Uncensored Hack) Eolith */
 	DRIVER( cthd2003 )	/* 0262 (c) 2001 Eolith */
 	DRIVER( ct2k3sp )	/* 0262 (c) 2001 Eolith */
+	DRIVER( ct2k3sa )	/* 0262 (c) 2001 Eolith */
 	DRIVER( mslug4 )	/* 0263 (c) 2001 Mega Enterprises */
+	DRIVER( mslug4h )	/* 0263 (c) 2001 Mega Enterprises */
 	DRIVER( mslug4uh )	/* 0263 (c) 2024 (AES Uncensored Hack) Mega Enterprises */
 	DRIVER( rotd )		/* 0264 (c) 2002 Evoga Entertainment */
+	DRIVER( rotdh )		/* 0264 (c) 2002 Evoga Entertainment */
 	DRIVER( kof2002 )	/* 0265 (c) 2002 Eolith */
+	DRIVER( kof2002b )	/* 0265 (c) 2002 Eolith */
 	DRIVER( kof2k2uh )	/* 0265 (c) 2024 (AES Uncensored Hack) Eolith */
 	DRIVER( kf2k2pls )	/* bootleg */
 	DRIVER( kf2k2pla )	/* bootleg */
 	DRIVER( kf2k2mp )	/* bootleg */
 	DRIVER( kf2k2mp2 )	/* bootleg */
-	DRIVER( kof2k4se )	/* bootleg of kof2002 */
 	DRIVER( kof10th )	/* 2005 SNK Playmore */
-	DRIVER( kf10thep)	/* bootleg of kof2002 */
-	DRIVER( kf2k5uni)	/* bootleg of kof2002 */
+	DRIVER( kf10thep )	/* bootleg of kof2002 */
+	DRIVER( kf2k5uni )	/* bootleg of kof2002 */
+	DRIVER( kof2k4se )	/* bootleg of kof2002 */
 	DRIVER( matrim )	/* 0266 (c) 2002 Atlus / Noise Factory */
 	DRIVER( pnyaa )		/* 0267 (c) 2003 Aiky / Taito */
+	DRIVER( pnyaaa )		/* 0267 (c) 2003 Aiky / Taito */
+	DRIVER( ms5pcb )	/* 0268 (c) 2003 SNK Playmore */
 	DRIVER( mslug5 )	/* 0268 (c) 2003 SNK Playmore */
+	DRIVER( mslug5h )	/* 0268 (c) 2003 SNK Playmore */
 	DRIVER( mslug5uh )	/* 0268 (c) 2024 (AES Uncensored Hack) SNK Playmore */
 	DRIVER( svcpcb )	/* 0269 (c) 2003 Playmore / Capcom - JAMMA PCB */
+	DRIVER( svcpcba )	/* 0269 (c) 2003 Playmore / Capcom - JAMMA PCB */
 	DRIVER( svc )		/* 0269 (c) 2003 Playmore / Capcom */
 	DRIVER( svcuh )		/* 0269 (c) 2024 (AES Uncensored Hack) Playmore / Capcom */
 	DRIVER( svcboot )	/* 0269 (c) 2003 Bootleg */
@@ -6172,24 +6225,28 @@ Other Sun games
 	DRIVER( svcplusa )	/* bootleg */
 	DRIVER( svcsplus )	/* bootleg */
 	DRIVER( samsho5 )	/* 0270 (c) 2003 Yuki Enterprises */
+	DRIVER( samsho5a )	/* 0270 (c) 2003 Yuki Enterprises */
+	DRIVER( samsho5h )	/* 0270 (c) 2003 Yuki Enterprises */
 	DRIVER( samsho5uh )	/* 0270 (c) 2024 (AES Uncensored Hack) Yuki Enterprises */
-	DRIVER( kf2k3pcb )	/* 0271 (c) 2003 Playmore - JAMMA PCB */
+	DRIVER( kf2k3pcb )	/* 0271 (c) 2003 SNK Playmore */
 	DRIVER( kof2003 )	/* 0271 (c) 2003 SNK Playmore */
-	DRIVER( kof2003d)	/* 0271 (c) 2003 SNK Playmore */
+	DRIVER( kof2003h )	/* 0271 (c) 2003 SNK Playmore */
 	DRIVER( kof2k3uh )	/* 0271 (c) 2024 (AES Uncensored Hack) SNK Playmore */
 	DRIVER( kf2k3bl)	/* bootleg */
 	DRIVER( kf2k3bla)	/* bootleg */
 	DRIVER( kf2k3pl)	/* bootleg */
 	DRIVER( kf2k3upl)	/* bootleg */
 	DRIVER( samsh5sp )	/* 0272 (c) 2003 Yuki Enterprises */
+	DRIVER( samsh5sph )	/* 0272 (c) 2003 Yuki Enterprises */
+	DRIVER( samsh5spho )	/* 0272 (c) 2003 Yuki Enterprises */
 	DRIVER( samsh5spuh )	/* 0272 (c) 2024 (AES Uncensored Hack) Yuki Enterprises */
 	DRIVER( lasthope )	/* (c) 2005 NG:DEV.TEAM */
-	DRIVER( knightsch )     /* (c) 2014 Neobitz */
+	DRIVER( knightsch )	/* (c) 2014 Neobitz */
 	DRIVER( xeno )	/* (c) 2019 Bitmap Bureau */
 	DRIVER( hypernoid )	/* 2021 M.Priewe */
 	DRIVER( cyborgforce )	/* (c) 2023 Neo Byte Force Ltd */
-	DRIVER( captainbarrel ) /* (c) 2024 Neo Byte Force Ltd */
-	DRIVER( gladmort )      /* (c) 2024 Pixelheart / ChipsOnSteroids */
+	DRIVER( captainbarrel )	/* (c) 2024 Neo Byte Force Ltd */
+	DRIVER( gladmort )	/* (c) 2024 Pixelheart / ChipsOnSteroids */
 
 	/* SemiCom 68020 based hardware */
 	DRIVER( baryon )    /* (c) 1997 SemiCom / Tirano */
