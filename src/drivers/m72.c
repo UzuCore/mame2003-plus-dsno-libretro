@@ -417,7 +417,7 @@ static READ_HANDLER( protection_r )
 
 static WRITE_HANDLER( protection_w )
 {
-	protection_ram[offset] = data ^ 0xff;;
+	protection_ram[offset] = data ^ 0xff;
 
 	if (offset == 0x0fff && data == 0)
 		memcpy(&protection_ram[0x0fe0],protection_crc,CRC_LEN);

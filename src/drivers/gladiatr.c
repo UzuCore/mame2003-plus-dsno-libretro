@@ -140,7 +140,7 @@ static READ_HANDLER( gladiator_dsw1_r )
 return   ((orig&0x01)<<7) | ((orig&0x02)<<5)
        | ((orig&0x04)<<3) | ((orig&0x08)<<1)
        | ((orig&0x10)>>1) | ((orig&0x20)>>3)
-       | ((orig&0x40)>>5) | ((orig&0x80)>>7);;
+       | ((orig&0x40)>>5) | ((orig&0x80)>>7);
 }
 
 static READ_HANDLER( gladiator_dsw2_r )

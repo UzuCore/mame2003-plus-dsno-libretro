@@ -366,12 +366,12 @@ static WRITE16_HANDLER( kof99_bankswitch_w )
 
 	/* unscramble bank number */
 	data =
-		(((data>>14)&1)<<0)+
-		(((data>> 6)&1)<<1)+
-		(((data>> 8)&1)<<2)+
-		(((data>>10)&1)<<3)+
-		(((data>>12)&1)<<4)+
-		(((data>> 5)&1)<<5);
+		(((data >> 14) & 1) << 0) +
+		(((data >>  6) & 1) << 1) +
+		(((data >>  8) & 1) << 2) +
+		(((data >> 10) & 1) << 3) +
+		(((data >> 12) & 1) << 4) +
+		(((data >>  5) & 1) << 5);
 
 	bankaddress = 0x100000 + bankoffset[data];
 
@@ -403,12 +403,12 @@ static WRITE16_HANDLER( garou_bankswitch_w )
 
 	/* unscramble bank number */
 	data =
-		(((data>> 5)&1)<<0)+
-		(((data>> 9)&1)<<1)+
-		(((data>> 7)&1)<<2)+
-		(((data>> 6)&1)<<3)+
-		(((data>>14)&1)<<4)+
-		(((data>>12)&1)<<5);
+		(((data >>  5) & 1) << 0) +
+		(((data >>  9) & 1) << 1) +
+		(((data >>  7) & 1) << 2) +
+		(((data >>  6) & 1) << 3) +
+		(((data >> 14) & 1) << 4) +
+		(((data >> 12) & 1) << 5);
 
 	bankaddress = 0x100000 + bankoffset[data];
 
@@ -442,12 +442,12 @@ static WRITE16_HANDLER( garouh_bankswitch_w )
 
 	/* unscramble bank number */
 	data =
-		(((data>> 4)&1)<<0)+
-		(((data>> 8)&1)<<1)+
-		(((data>>14)&1)<<2)+
-		(((data>> 2)&1)<<3)+
-		(((data>>11)&1)<<4)+
-		(((data>>13)&1)<<5);
+		(((data >>  4) & 1) << 0) +
+		(((data >>  8) & 1) << 1) +
+		(((data >> 14) & 1) << 2) +
+		(((data >>  2) & 1) << 3) +
+		(((data >> 11) & 1) << 4) +
+		(((data >> 13) & 1) << 5);
 
 	bankaddress = 0x100000 + bankoffset[data];
 
@@ -460,35 +460,69 @@ static WRITE16_HANDLER( mslug3_bankswitch_w )
 	int bankaddress;
 	static int bankoffset[64] =
 	{
-	  0x000000, 0x020000, 0x040000, 0x060000, /* 00*/
-	  0x070000, 0x090000, 0x0b0000, 0x0d0000, /* 04*/
-	  0x0e0000, 0x0f0000, 0x120000, 0x130000, /* 08*/
-	  0x140000, 0x150000, 0x180000, 0x190000, /* 12*/
-	  0x1a0000, 0x1b0000, 0x1e0000, 0x1f0000, /* 16*/
-	  0x200000, 0x210000, 0x240000, 0x250000, /* 20*/
-	  0x260000, 0x270000, 0x2a0000, 0x2b0000, /* 24*/
-	  0x2c0000, 0x2d0000, 0x300000, 0x310000, /* 28*/
-	  0x320000, 0x330000, 0x360000, 0x370000, /* 32*/
-	  0x380000, 0x390000, 0x3c0000, 0x3d0000, /* 36*/
-	  0x400000, 0x410000, 0x440000, 0x450000, /* 40*/
-	  0x460000, 0x470000, 0x4a0000, 0x4b0000, /* 44*/
-	  0x4c0000, /* rest not used? */
+		0x000000, 0x020000, 0x040000, 0x060000, /* 00*/
+		0x070000, 0x090000, 0x0b0000, 0x0d0000, /* 04*/
+		0x0e0000, 0x0f0000, 0x120000, 0x130000, /* 08*/
+		0x140000, 0x150000, 0x180000, 0x190000, /* 12*/
+		0x1a0000, 0x1b0000, 0x1e0000, 0x1f0000, /* 16*/
+		0x200000, 0x210000, 0x240000, 0x250000, /* 20*/
+		0x260000, 0x270000, 0x2a0000, 0x2b0000, /* 24*/
+		0x2c0000, 0x2d0000, 0x300000, 0x310000, /* 28*/
+		0x320000, 0x330000, 0x360000, 0x370000, /* 32*/
+		0x380000, 0x390000, 0x3c0000, 0x3d0000, /* 36*/
+		0x400000, 0x410000, 0x440000, 0x450000, /* 40*/
+		0x460000, 0x470000, 0x4a0000, 0x4b0000, /* 44*/
+		0x4c0000, /* rest not used? */
 	};
 
 	/* unscramble bank number */
 	data =
-		(((data>>14)&1)<<0)+
-		(((data>>12)&1)<<1)+
-		(((data>>15)&1)<<2)+
-		(((data>> 6)&1)<<3)+
-		(((data>> 3)&1)<<4)+
-		(((data>> 9)&1)<<5);
+		(((data >> 14) & 1) << 0) +
+		(((data >> 12) & 1) << 1) +
+		(((data >> 15) & 1) << 2) +
+		(((data >>  6) & 1) << 3) +
+		(((data >>  3) & 1) << 4) +
+		(((data >>  9) & 1) << 5);
 
 	bankaddress = 0x100000 + bankoffset[data];
 
 	neogeo_set_cpu1_second_bank(bankaddress);
 }
 
+static WRITE16_HANDLER( mslug3a_bankswitch_w )
+{
+	/* thanks to Razoola and Mr K for the info */
+	int bankaddress;
+	static int bankoffset[64] =
+	{
+		0x000000, 0x030000, 0x040000, 0x070000, // 00
+		0x080000, 0x0a0000, 0x0c0000, 0x0e0000, // 04
+		0x0f0000, 0x100000, 0x130000, 0x140000, // 08
+		0x150000, 0x160000, 0x190000, 0x1a0000, // 12
+		0x1B0000, 0x1C0000, 0x1F0000, 0x200000, // 16
+		0x210000, 0x220000, 0x250000, 0x260000, // 20
+		0x270000, 0x280000, 0x2B0000, 0x2C0000, // 24
+		0x2D0000, 0x2E0000, 0x310000, 0x320000, // 28
+		0x330000, 0x340000, 0x370000, 0x380000, // 32
+		0x390000, 0x3A0000, 0x3D0000, 0x3E0000, // 36
+		0x400000, 0x410000, 0x440000, 0x450000, // 40
+		0x460000, 0x470000, 0x4A0000, 0x4B0000, // 44
+		0x4C0000 /* rest not used? */
+	};
+
+	/* unscramble bank number */
+	data =
+		(((data >> 15) & 1) << 0) +
+		(((data >>  3) & 1) << 1) +
+		(((data >>  1) & 1) << 2) +
+		(((data >>  6) & 1) << 3) +
+		(((data >> 12) & 1) << 4) +
+		(((data >> 11) & 1) << 5);
+
+	bankaddress = 0x100000 + bankoffset[data];
+
+	neogeo_set_cpu1_second_bank(bankaddress);
+}
 
 static WRITE16_HANDLER( kof2000_bankswitch_w )
 {
@@ -509,12 +543,12 @@ static WRITE16_HANDLER( kof2000_bankswitch_w )
 
 	/* unscramble bank number */
 	data =
-		(((data>>15)&1)<<0)+
-		(((data>>14)&1)<<1)+
-		(((data>> 7)&1)<<2)+
-		(((data>> 3)&1)<<3)+
-		(((data>>10)&1)<<4)+
-		(((data>> 5)&1)<<5);
+		(((data >> 15) & 1) << 0) +
+		(((data >> 14) & 1) << 1) +
+		(((data >>  7) & 1) << 2) +
+		(((data >>  3) & 1) << 3) +
+		(((data >> 10) & 1) << 4) +
+		(((data >>  5) & 1) << 5);
 
 	bankaddress = 0x100000 + bankoffset[data];
 
@@ -570,6 +604,15 @@ static void neogeo_custom_memory(void)
 	{
 		/* special ROM banking handler */
 		install_mem_write16_handler(0, 0x2fffe4, 0x2fffe5, mslug3_bankswitch_w);
+
+		/* additional protection */
+		install_mem_read16_handler(0, 0x2fe446, 0x2fe447, prot_9a37_r);
+	}
+
+	if (!strcmp(Machine->gamedrv->name,"mslug3a"))
+	{
+		/* special ROM banking handler */
+		install_mem_write16_handler(0, 0x2fffe4, 0x2fffe5, mslug3a_bankswitch_w);
 
 		/* additional protection */
 		install_mem_read16_handler(0, 0x2fe446, 0x2fe447, prot_9a37_r);
@@ -664,6 +707,7 @@ static void neogeo_custom_memory(void)
 			!strcmp(Machine->gamedrv->name,"mslug2t") ||
 			!strcmp(Machine->gamedrv->name,"mslug3") ||
 			!strcmp(Machine->gamedrv->name,"mslug3h") ||
+			!strcmp(Machine->gamedrv->name,"mslug3a") ||
 			!strcmp(Machine->gamedrv->name,"mslug3uh") ||
 			!strcmp(Machine->gamedrv->name,"garou") ||
 			!strcmp(Machine->gamedrv->name,"garouh") ||
