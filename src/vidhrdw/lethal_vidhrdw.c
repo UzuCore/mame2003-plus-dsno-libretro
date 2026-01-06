@@ -45,7 +45,7 @@ static void lethalen_tile_callback(int layer, int *code, int *color)
 {
 	/* where are the flip bits? lethal enforcers needs them on reload and p2 start screen */
 	/* they don't seem to be anywhere in the ram we're looking at... */
-/*  tile_info.flags = TILE_FLIPYX(1); */
+/*  tile_info.flags = TILE_FLIPYX(1);; */
 
 
 	*color = layer_colorbase[layer] + ((*color & 0x3c)<<2);

@@ -1108,7 +1108,7 @@ void do_cd_command(void){
 				/*get buffer size*/
 				log_cb(RETRO_LOG_DEBUG, LOGPRE "CDBLOCK Command 0x%02x\n", (CR1>>8));
 
-				pn= CR3 >> 8;
+				pn= CR3 >> 8;;
 
 				CD_hirq |= HIRQ_CMOK | HIRQ_ESEL;
 

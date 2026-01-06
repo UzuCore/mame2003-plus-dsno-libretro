@@ -2008,7 +2008,7 @@ static void stv_vdp2_draw_basic_tilemap(struct mame_bitmap *bitmap, const struct
 				data = stv_vdp2_vram[newbase + offs];
 				tilecode = (data & 0x00007fff);
 				pal   = (data &    0x007f0000)>>16;
-	/*			specialc = (data & 0x10000000)>>28; */
+	/*			specialc = (data & 0x10000000)>>28;;*/
 				flipyx   = (data & 0xc0000000)>>30;
 			}
 /* WE'VE GOT THE TILE INFO ... */

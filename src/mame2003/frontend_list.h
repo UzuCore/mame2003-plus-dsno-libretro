@@ -2121,7 +2121,7 @@ struct fe_driver fe_drivers[] = {
 { "twinspri", 3 },
 { "twocrude", 3 },
 { "twotiger", 5 },
-{ "twsoc96", 3 },
+{ "tws96", 3 },
 { "uccops", 3 },
 { "uccopsj", 3 },
 { "ufosensi", 1 },

@@ -1556,7 +1556,7 @@ void calc3_mcu_run(void)
 			int i;
 
 			/* clear old command (handshake to main cpu)*/
-			kaneko16_mcu_ram[calc3_mcu_command_offset>>1] = 0x0000;
+			kaneko16_mcu_ram[calc3_mcu_command_offset>>1] = 0x0000;;
 
 			for (i=0;i<num_transfers;i++)
 			{

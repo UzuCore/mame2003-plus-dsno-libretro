@@ -95,103 +95,157 @@ void neogeo_set_lower_resolution( void )
 		!strcmp(Machine->gamedrv->name,"ridhero") ||
 		!strcmp(Machine->gamedrv->name,"ridheroh") ||
 		!strcmp(Machine->gamedrv->name,"alpham2") ||
+		!strcmp(Machine->gamedrv->name,"alpham2p") ||
 		!strcmp(Machine->gamedrv->name,"cyberlip") ||
 		!strcmp(Machine->gamedrv->name,"superspy") ||
 		!strcmp(Machine->gamedrv->name,"mutnat") ||
 		!strcmp(Machine->gamedrv->name,"kotm") ||
 		!strcmp(Machine->gamedrv->name,"kotmh") ||
 		!strcmp(Machine->gamedrv->name,"burningf") ||
-		!strcmp(Machine->gamedrv->name,"burningh") ||
+		!strcmp(Machine->gamedrv->name,"burningfh") ||
+		!strcmp(Machine->gamedrv->name,"burningfpa") ||
+		!strcmp(Machine->gamedrv->name,"burningfpb") ||
+		!strcmp(Machine->gamedrv->name,"burningfp") ||
 		!strcmp(Machine->gamedrv->name,"lbowling") ||
 		!strcmp(Machine->gamedrv->name,"gpilots") ||
+		!strcmp(Machine->gamedrv->name,"gpilotsh") ||
+		!strcmp(Machine->gamedrv->name,"gpilotsp") ||
 		!strcmp(Machine->gamedrv->name,"joyjoy") ||
 		!strcmp(Machine->gamedrv->name,"quizdais") ||
+		!strcmp(Machine->gamedrv->name,"quizdaisk") ||
 		!strcmp(Machine->gamedrv->name,"lresort") ||
+		!strcmp(Machine->gamedrv->name,"lresortp") ||
 		!strcmp(Machine->gamedrv->name,"legendos") ||
 		!strcmp(Machine->gamedrv->name,"2020bb") ||
 		!strcmp(Machine->gamedrv->name,"2020bba") ||
 		!strcmp(Machine->gamedrv->name,"2020bbh") ||
 		!strcmp(Machine->gamedrv->name,"socbrawl") ||
+		!strcmp(Machine->gamedrv->name,"socbrawlh") ||
 		!strcmp(Machine->gamedrv->name,"roboarmy") ||
-		!strcmp(Machine->gamedrv->name,"roboarma") ||
+		!strcmp(Machine->gamedrv->name,"roboarmya") ||
 		!strcmp(Machine->gamedrv->name,"fbfrenzy") ||
 		!strcmp(Machine->gamedrv->name,"kotm2") ||
+		!strcmp(Machine->gamedrv->name,"kotm2a") ||
+		!strcmp(Machine->gamedrv->name,"kotm2p") ||
+		!strcmp(Machine->gamedrv->name,"kotm2k") ||
 		!strcmp(Machine->gamedrv->name,"sengoku2") ||
 		!strcmp(Machine->gamedrv->name,"bstars2") ||
 		!strcmp(Machine->gamedrv->name,"aof") ||
+		!strcmp(Machine->gamedrv->name,"aofk") ||
 		!strcmp(Machine->gamedrv->name,"ssideki") ||
 		!strcmp(Machine->gamedrv->name,"kof94") ||
+		!strcmp(Machine->gamedrv->name,"kof94kr") ||
+		!strcmp(Machine->gamedrv->name,"kof94uh") ||
 		!strcmp(Machine->gamedrv->name,"aof2") ||
 		!strcmp(Machine->gamedrv->name,"aof2a") ||
 		!strcmp(Machine->gamedrv->name,"savagere") ||
 		!strcmp(Machine->gamedrv->name,"kof95") ||
 		!strcmp(Machine->gamedrv->name,"kof95a") ||
+		!strcmp(Machine->gamedrv->name,"kof95h") ||
+		!strcmp(Machine->gamedrv->name,"kof95kr") ||
+		!strcmp(Machine->gamedrv->name,"kof95uh") ||
 		!strcmp(Machine->gamedrv->name,"samsho3") ||
-		!strcmp(Machine->gamedrv->name,"samsho3a") ||
+		!strcmp(Machine->gamedrv->name,"samsho3h") ||
 		!strcmp(Machine->gamedrv->name,"fswords") ||
+		!strcmp(Machine->gamedrv->name,"samsho3uh") ||
+		!strcmp(Machine->gamedrv->name,"samsho3k") ||
 		!strcmp(Machine->gamedrv->name,"aof3") ||
 		!strcmp(Machine->gamedrv->name,"aof3k") ||
+		!strcmp(Machine->gamedrv->name,"aof3uh") ||
 		!strcmp(Machine->gamedrv->name,"kof96") ||
+		!strcmp(Machine->gamedrv->name,"kof96a") ||
 		!strcmp(Machine->gamedrv->name,"kof96h") ||
+		!strcmp(Machine->gamedrv->name,"kof96kr") ||
 		!strcmp(Machine->gamedrv->name,"kizuna") ||
 		!strcmp(Machine->gamedrv->name,"kof97") ||
-		!strcmp(Machine->gamedrv->name,"kof97a") ||
+		!strcmp(Machine->gamedrv->name,"kof97h") ||
+		!strcmp(Machine->gamedrv->name,"kof97k") ||
+		!strcmp(Machine->gamedrv->name,"kof97kr") ||
+		!strcmp(Machine->gamedrv->name,"kof97uh") ||
 		!strcmp(Machine->gamedrv->name,"kof97pls") ||
 		!strcmp(Machine->gamedrv->name,"kog") ||
 		!strcmp(Machine->gamedrv->name,"irrmaze") ||
 		!strcmp(Machine->gamedrv->name,"mslug2") ||
+		!strcmp(Machine->gamedrv->name,"mslug2uh") ||
+		!strcmp(Machine->gamedrv->name,"mslug2t") ||
 		!strcmp(Machine->gamedrv->name,"kof98") ||
+		!strcmp(Machine->gamedrv->name,"kof98a") ||
 		!strcmp(Machine->gamedrv->name,"kof98k") ||
-		!strcmp(Machine->gamedrv->name,"kof98n") ||
+		!strcmp(Machine->gamedrv->name,"kof98ka") ||
+		!strcmp(Machine->gamedrv->name,"kof98h") ||
+		!strcmp(Machine->gamedrv->name,"kof98kr") ||
+		!strcmp(Machine->gamedrv->name,"kof98uh") ||
 		!strcmp(Machine->gamedrv->name,"mslugx") ||
+		!strcmp(Machine->gamedrv->name,"mslugxuh") ||
 		!strcmp(Machine->gamedrv->name,"kof99") ||
-		!strcmp(Machine->gamedrv->name,"kof99a") ||
+		!strcmp(Machine->gamedrv->name,"kof99h") ||
 		!strcmp(Machine->gamedrv->name,"kof99e") ||
-		!strcmp(Machine->gamedrv->name,"kof99n") ||
+		!strcmp(Machine->gamedrv->name,"kof99k") ||
+		!strcmp(Machine->gamedrv->name,"kof99ka") ||
 		!strcmp(Machine->gamedrv->name,"kof99p") ||
+		!strcmp(Machine->gamedrv->name,"kof99kr") ||
+		!strcmp(Machine->gamedrv->name,"kof99uh") ||
 		!strcmp(Machine->gamedrv->name,"mslug3") ||
-		!strcmp(Machine->gamedrv->name,"mslug3n") ||
+		!strcmp(Machine->gamedrv->name,"mslug3h") ||
+		!strcmp(Machine->gamedrv->name,"mslug3uh") ||
 		!strcmp(Machine->gamedrv->name,"kof2000") ||
 		!strcmp(Machine->gamedrv->name,"kof2000n") ||
+		!strcmp(Machine->gamedrv->name,"kof2kkr") ||
+		!strcmp(Machine->gamedrv->name,"kof2kuh") ||
 		!strcmp(Machine->gamedrv->name,"zupapa") ||
 		!strcmp(Machine->gamedrv->name,"kof2001") ||
 		!strcmp(Machine->gamedrv->name,"kof2001h") ||
+		!strcmp(Machine->gamedrv->name,"kof2k1uh") ||
 		!strcmp(Machine->gamedrv->name,"cthd2003") ||
 		!strcmp(Machine->gamedrv->name,"ct2k3sp") ||
+		!strcmp(Machine->gamedrv->name,"ct2k3sa") ||
 		!strcmp(Machine->gamedrv->name,"kof2002") ||
+		!strcmp(Machine->gamedrv->name,"kof2002b") ||
+		!strcmp(Machine->gamedrv->name,"kof2k2uh") ||
 		!strcmp(Machine->gamedrv->name,"kf2k2pls") ||
 		!strcmp(Machine->gamedrv->name,"kf2k2pla") ||
 		!strcmp(Machine->gamedrv->name,"kf2k2mp") ||
 		!strcmp(Machine->gamedrv->name,"kf2k2mp2") ||
 		!strcmp(Machine->gamedrv->name,"kof10th") ||
-		!strcmp(Machine->gamedrv->name,"kf2k5uni") ||
 		!strcmp(Machine->gamedrv->name,"kf10thep") ||
+		!strcmp(Machine->gamedrv->name,"kf2k5uni") ||
 		!strcmp(Machine->gamedrv->name,"kof2k4se") ||
+		!strcmp(Machine->gamedrv->name,"ms5pcb") ||
 		!strcmp(Machine->gamedrv->name,"mslug5") ||
-		!strcmp(Machine->gamedrv->name,"ms5plus") ||
+		!strcmp(Machine->gamedrv->name,"mslug5h") ||
+		!strcmp(Machine->gamedrv->name,"mslug5uh") ||
 		!strcmp(Machine->gamedrv->name,"svcpcb") ||
+		!strcmp(Machine->gamedrv->name,"svcpcba") ||
 		!strcmp(Machine->gamedrv->name,"svc") ||
+		!strcmp(Machine->gamedrv->name,"svcuh") ||
 		!strcmp(Machine->gamedrv->name,"svcboot") ||
 		!strcmp(Machine->gamedrv->name,"svcplus") ||
 		!strcmp(Machine->gamedrv->name,"svcplusa") ||
 		!strcmp(Machine->gamedrv->name,"svcsplus") ||
 		!strcmp(Machine->gamedrv->name,"samsho5") ||
+		!strcmp(Machine->gamedrv->name,"samsho5a") ||
 		!strcmp(Machine->gamedrv->name,"samsho5h") ||
-		!strcmp(Machine->gamedrv->name,"samsho5b") ||
+		!strcmp(Machine->gamedrv->name,"samsho5uh") ||
 		!strcmp(Machine->gamedrv->name,"kf2k3pcb") ||
 		!strcmp(Machine->gamedrv->name,"kof2003") ||
+		!strcmp(Machine->gamedrv->name,"kof2003h") ||
+		!strcmp(Machine->gamedrv->name,"kof2k3uh") ||
 		!strcmp(Machine->gamedrv->name,"kf2k3bl") ||
 		!strcmp(Machine->gamedrv->name,"kf2k3bla") ||
 		!strcmp(Machine->gamedrv->name,"kf2k3pl") ||
 		!strcmp(Machine->gamedrv->name,"kf2k3upl") ||
 		!strcmp(Machine->gamedrv->name,"samsh5sp") ||
-		!strcmp(Machine->gamedrv->name,"samsh5sh") ||
-		!strcmp(Machine->gamedrv->name,"samsh5sn") ||
+		!strcmp(Machine->gamedrv->name,"samsh5sph") ||
+		!strcmp(Machine->gamedrv->name,"samsh5spho") ||
+		!strcmp(Machine->gamedrv->name,"samsh5spuh") ||
 		!strcmp(Machine->gamedrv->name,"ncombat") ||
-		!strcmp(Machine->gamedrv->name,"ncombata") ||
+		!strcmp(Machine->gamedrv->name,"ncombath") ||
 		!strcmp(Machine->gamedrv->name,"crsword") ||
+		!strcmp(Machine->gamedrv->name,"crswordk") ||
 		!strcmp(Machine->gamedrv->name,"ncommand") ||
+		!strcmp(Machine->gamedrv->name,"ncommandk") ||
 		!strcmp(Machine->gamedrv->name,"wh2") ||
+		!strcmp(Machine->gamedrv->name,"wh2h") ||
 		!strcmp(Machine->gamedrv->name,"wh2j") ||
 		!strcmp(Machine->gamedrv->name,"aodk") ||
 		!strcmp(Machine->gamedrv->name,"mosyougi") ||
@@ -199,9 +253,12 @@ void neogeo_set_lower_resolution( void )
 		!strcmp(Machine->gamedrv->name,"twinspri") ||
 		!strcmp(Machine->gamedrv->name,"zintrckb") ||
 		!strcmp(Machine->gamedrv->name,"spinmast") ||
+		!strcmp(Machine->gamedrv->name,"spinmastk") ||
 		!strcmp(Machine->gamedrv->name,"wjammers") ||
+		!strcmp(Machine->gamedrv->name,"wjammersk") ||
 		!strcmp(Machine->gamedrv->name,"karnovr") ||
 		!strcmp(Machine->gamedrv->name,"strhoop") ||
+		!strcmp(Machine->gamedrv->name,"strhoopk") ||
 		!strcmp(Machine->gamedrv->name,"ghostlop") ||
 		!strcmp(Machine->gamedrv->name,"magdrop2") ||
 		!strcmp(Machine->gamedrv->name,"magdrop3") ||
@@ -213,38 +270,46 @@ void neogeo_set_lower_resolution( void )
 		!strcmp(Machine->gamedrv->name,"bakatono") ||
 		!strcmp(Machine->gamedrv->name,"turfmast") ||
 		!strcmp(Machine->gamedrv->name,"mslug") ||
+		!strcmp(Machine->gamedrv->name,"msluguh") ||
 		!strcmp(Machine->gamedrv->name,"zedblade") ||
 		!strcmp(Machine->gamedrv->name,"viewpoin") ||
+		!strcmp(Machine->gamedrv->name,"viewpoinp") ||
 		!strcmp(Machine->gamedrv->name,"quizkof") ||
+		!strcmp(Machine->gamedrv->name,"quizkofk") ||
 		!strcmp(Machine->gamedrv->name,"pgoal") ||
 		!strcmp(Machine->gamedrv->name,"shocktro") ||
-		!strcmp(Machine->gamedrv->name,"shocktra") ||
+		!strcmp(Machine->gamedrv->name,"shocktroa") ||
 		!strcmp(Machine->gamedrv->name,"shocktr2") ||
-		!strcmp(Machine->gamedrv->name,"lans2004") ||
 		!strcmp(Machine->gamedrv->name,"galaxyfg") ||
 		!strcmp(Machine->gamedrv->name,"wakuwak7") ||
+		!strcmp(Machine->gamedrv->name,"wakuwak7k") ||
 		!strcmp(Machine->gamedrv->name,"pbobbl2n") ||
 		!strcmp(Machine->gamedrv->name,"pnyaa") ||
+		!strcmp(Machine->gamedrv->name,"pnyaaa") ||
 		!strcmp(Machine->gamedrv->name,"marukodq") ||
 		!strcmp(Machine->gamedrv->name,"gowcaizr") ||
 		!strcmp(Machine->gamedrv->name,"sdodgeb") ||
 		!strcmp(Machine->gamedrv->name,"tws96") ||
 		!strcmp(Machine->gamedrv->name,"preisle2") ||
 		!strcmp(Machine->gamedrv->name,"fightfev") ||
-		!strcmp(Machine->gamedrv->name,"fightfva") ||
+		!strcmp(Machine->gamedrv->name,"fightfeva") ||
 		!strcmp(Machine->gamedrv->name,"popbounc") ||
 		!strcmp(Machine->gamedrv->name,"androdun") ||
 		!strcmp(Machine->gamedrv->name,"puzzledp") ||
+		!strcmp(Machine->gamedrv->name,"puzzledpk") ||
 		!strcmp(Machine->gamedrv->name,"neomrdo") ||
 		!strcmp(Machine->gamedrv->name,"goalx3") ||
 		!strcmp(Machine->gamedrv->name,"neodrift") ||
 		!strcmp(Machine->gamedrv->name,"puzzldpr") ||
+		!strcmp(Machine->gamedrv->name,"puzzldprk") ||
 		!strcmp(Machine->gamedrv->name,"flipshot") ||
+		!strcmp(Machine->gamedrv->name,"flipshotk") ||
 		!strcmp(Machine->gamedrv->name,"ctomaday") ||
 		!strcmp(Machine->gamedrv->name,"ganryu") ||
 		!strcmp(Machine->gamedrv->name,"bangbead") ||
 		!strcmp(Machine->gamedrv->name,"mslug4") ||
-		!strcmp(Machine->gamedrv->name,"ms4plus") ||
+		!strcmp(Machine->gamedrv->name,"mslug4h") ||
+		!strcmp(Machine->gamedrv->name,"mslug4uh") ||
 		!strcmp(Machine->gamedrv->name,"jockeygp") ||
 		!strcmp(Machine->gamedrv->name,"vliner") ||
 		!strcmp(Machine->gamedrv->name,"vlinero"))

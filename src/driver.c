@@ -857,7 +857,7 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( spnchout )	/* (c) 1984 */
 	DRIVER( spnchotj )	/* (c) 1984 (Japan) */
 	DRIVER( armwrest )	/* (c) 1985 */
-  DRIVER( jammin )	  /* (c) 1985 Atari Prototype */
+	DRIVER( jammin )	  /* (c) 1985 Atari Prototype */
 
 	/* Nintendo Playchoice 10 games */
 	DRIVER( pc_tenis )	/* (c) 1983 Nintendo */
@@ -3625,8 +3625,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( boogwinga )	/* MBD (c) 1993 Data East Corporation (Asia) */
 	DRIVER( ragtime )	/* MBD (c) 1993 Data East Corporation (Japan)*/
 	DRIVER( ragtimea )	/* MBD (c) 1993 Data East Corporation (Japan)*/
-	DRIVER( dblewing )       /* MBE (c) 1993 Mitchell */
-  DRIVER( dblewingb )      /* MBE (c) 1994 Mitchell */
+	DRIVER( dblewing )      /* MBE (c) 1993 Mitchell */
 	DRIVER( fghthist )	/* MBF (c) 1993 Data East Corporation (World) */
 	DRIVER( fghthistu )	/* MBF (c) 1993 Data East Corporation (US) */
 	DRIVER( fghthista )	/* MBF (c) 1993 Data East Corporation (US) */
@@ -5912,6 +5911,7 @@ Other Sun games
 	/* the four digits number is the game ID stored at address 0x0108 of the program ROM */
 	/* info on prototypes taken from http://www.members.tripod.com/fresa/proto/puzzle.htm */
 	DRIVER( nam1975 )	/* 0001 (c) 1990 SNK */
+	DRIVER( nam1975k )	/* 0001 (c) 2026 (Korean Translation) SNK */
 	DRIVER( bstars )	/* 0002 (c) 1990 SNK */
 	DRIVER( bstarsh )	/* 0002 (c) 1990 SNK */
 	DRIVER( tpgolf )	/* 0003 (c) 1990 SNK */
@@ -6045,14 +6045,13 @@ Other Sun games
 	DRIVER( ssideki3 )	/* 0081 (c) 1995 SNK */
 	DRIVER( doubledr )	/* 0082 (c) 1995 Technos */
 	DRIVER( pbobblen )	/* 0083 (c) 1994 Taito */
-	DRIVER( pbobblenb )	/* bootleg */
 	DRIVER( kof95 )		/* 0084 (c) 1995 SNK */
 	DRIVER( kof95a )	/* 0084 (c) 1995 SNK */
 	DRIVER( kof95h )	/* 0084 (c) 1995 SNK */
 	DRIVER( kof95kr )	/* 0084 (c) 2005 (Korean Translation) SNK */
 	DRIVER( kof95uh )	/* 0084 (c) 2024 (AES Uncensored Hack) SNK */
 	/* 0085 Shinsetsu Samurai Spirits Bushidoretsuden / Samurai Shodown RPG (CD only) */
-	DRIVER( twsoc96 )		/* 0086 (c) 1996 Tecmo */
+	DRIVER( tws96 )		/* 0086 (c) 1996 Tecmo */
 	DRIVER( samsho3 )	/* 0087 (c) 1995 SNK */
 	DRIVER( samsho3h )	/* 0087 (c) 1995 SNK */
 	DRIVER( fswords )	/* 0087 (c) 1995 SNK */
@@ -6108,6 +6107,7 @@ Other Sun games
 	DRIVER( magdrop2 )	/* 0221 (c) 1996 Data East Corporation */
 	DRIVER( samsho4 )	/* 0222 (c) 1996 SNK */
 	DRIVER( samsho4k )	/* 0222 (c) 1996 SNK */
+	DRIVER( samsho4kr )	/* 0222 (c) 2026 (Korean Translation) SNK */
 	DRIVER( samsho4uh )	/* 0222 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( rbffspec )	/* 0223 (c) 1996 SNK */
 	DRIVER( rbffspeck )	/* 0223 (c) 1996 SNK */
@@ -6127,7 +6127,6 @@ Other Sun games
 	DRIVER( kof97kr )	/* 0232 (c) 2005 (Korean Translation) SNK */
 	DRIVER( kof97uh )	/* 0232 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( kof97pls )	/* bootleg of kof97 */
-	DRIVER( kof97oro )	/* bootleg of kof97 */
 	DRIVER( kog )		/* bootleg of kof97 */
 	DRIVER( magdrop3 )	/* 0233 (c) 1997 Data East Corporation */
 	DRIVER( lastblad )	/* 0234 (c) 1997 SNK */
@@ -6160,7 +6159,6 @@ Other Sun games
 	DRIVER( neocup98k )	/* 0244 (c) 2006 (Korean Translation) SNK */
 	DRIVER( breakrev )	/* 0245 (c) 1998 Visco */
 	DRIVER( shocktr2 )	/* 0246 (c) 1998 Saurus */
-	DRIVER( lans2004 )	/* bootleg */
 	DRIVER( flipshot )	/* 0247 (c) 1998 Visco */
 	DRIVER( flipshotk )	/* 0247 (c) 2005 (Korean Translation) Visco */
 	DRIVER( pbobbl2n )	/* 0248 (c) 1999 Taito (SNK license) */
@@ -6180,13 +6178,10 @@ Other Sun games
 	DRIVER( garouh )	/* 0253 (c) 1999 SNK */
 	DRIVER( garouha )	/* 0253 (c) 1999 SNK */
 	DRIVER( garoup )	/* 0253 (c) 1999 SNK */
-	DRIVER( garoubl )	/* bootleg */
 	DRIVER( s1945p )	/* 0254 (c) 1999 Psikyo */
 	DRIVER( preisle2 )	/* 0255 (c) 1999 Yumekobo */
 	DRIVER( mslug3 )	/* 0256 (c) 2000 SNK */
-	DRIVER( mslug3a )	/* 0256 (c) 2000 SNK */
 	DRIVER( mslug3h )	/* 0256 (c) 2000 SNK */
-	DRIVER( mslug3b6 )	/* bootleg */
 	DRIVER( mslug3uh )	/* 0256 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( kof2000 )	/* 0257 (c) 2000 SNK */
 	DRIVER( kof2000n )	/* 0257 (c) 2000 SNK */
@@ -6194,7 +6189,6 @@ Other Sun games
 	DRIVER( kof2kuh )	/* 0257 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( bangbead )	/* 0259 (c) 2000 Visco */
 	DRIVER( nitd )		/* 0260 (c) 2000 Eleven / Gavaking */
-	DRIVER( nitdbl )	/* bootleg */
 	DRIVER( sengoku3 )	/* 0261 (c) 2001 SNK */
 	DRIVER( sengoku3a )	/* 0261 (c) 2001 SNK */
 	DRIVER( kof2001 )	/* 0262 (c) 2001 Eolith */
@@ -6220,14 +6214,11 @@ Other Sun games
 	DRIVER( kf2k5uni )	/* bootleg of kof2002 */
 	DRIVER( kof2k4se )	/* bootleg of kof2002 */
 	DRIVER( matrim )	/* 0266 (c) 2002 Atlus / Noise Factory */
-	DRIVER( matrimbl )	/* bootleg */
 	DRIVER( pnyaa )		/* 0267 (c) 2003 Aiky / Taito */
-	DRIVER( pnyaaa )	/* 0267 (c) 2003 Aiky / Taito */
+	DRIVER( pnyaaa )		/* 0267 (c) 2003 Aiky / Taito */
 	DRIVER( ms5pcb )	/* 0268 (c) 2003 SNK Playmore */
 	DRIVER( mslug5 )	/* 0268 (c) 2003 SNK Playmore */
 	DRIVER( mslug5h )	/* 0268 (c) 2003 SNK Playmore */
-	DRIVER( mslug5b )	/* bootleg */
-	DRIVER( ms5plus )	/* bootleg */
 	DRIVER( mslug5uh )	/* 0268 (c) 2024 (AES Uncensored Hack) SNK Playmore */
 	DRIVER( svcpcb )	/* 0269 (c) 2003 Playmore / Capcom - JAMMA PCB */
 	DRIVER( svcpcba )	/* 0269 (c) 2003 Playmore / Capcom - JAMMA PCB */
@@ -6240,7 +6231,6 @@ Other Sun games
 	DRIVER( samsho5 )	/* 0270 (c) 2003 Yuki Enterprises */
 	DRIVER( samsho5a )	/* 0270 (c) 2003 Yuki Enterprises */
 	DRIVER( samsho5h )	/* 0270 (c) 2003 Yuki Enterprises */
-	DRIVER( samsho5b )	/* bootleg */
 	DRIVER( samsho5uh )	/* 0270 (c) 2024 (AES Uncensored Hack) Yuki Enterprises */
 	DRIVER( kf2k3pcb )	/* 0271 (c) 2003 SNK Playmore */
 	DRIVER( kof2003 )	/* 0271 (c) 2003 SNK Playmore */
@@ -6254,26 +6244,21 @@ Other Sun games
 	DRIVER( samsh5sph )	/* 0272 (c) 2003 Yuki Enterprises */
 	DRIVER( samsh5spho )	/* 0272 (c) 2003 Yuki Enterprises */
 	DRIVER( samsh5spuh )	/* 0272 (c) 2024 (AES Uncensored Hack) Yuki Enterprises */
-	DRIVER( diggerma )	/* (c) 2000 Kyle Hodgetts */
-	DRIVER( sbp )		/* (c) 2004 Vektorlogic */
-	DRIVER( kof10th )       /* 2005 SNK Playmore */
-	DRIVER( kf10thep)       /* bootleg of kof2002 */
-	DRIVER( kf2k5uni)       /* bootleg of kof2002 */
-	DRIVER( lasthope )      /* (c) 2005 NG:DEV.TEAM */
-  DRIVER( knightsch )     /* (c) 2014 Neobitz */
-	DRIVER( xeno )          /* (c) 2019 Bitmap Bureau */
-	DRIVER( hypernoid )     /* 2021 M.Priewe */
-  DRIVER( teot)           /* 2022 Ozzy Ouzo */
-	DRIVER( cyborgforce )   /* (c) 2023 Neo Byte Force Ltd */
-	DRIVER( captainbarrel ) /* (c) 2024 Neo Byte Force Ltd */
-  DRIVER( gladmort )      /* (c) 2024 Pixelheart / ChipsOnSteroids */
-  DRIVER( doubled1 )      /* (c) 2025 La Casa De Ruivo / Neo Byte Force */
-  DRIVER( doubled1a )      /* (c) 2025 La Casa De Ruivo / Neo Byte Force */
-  DRIVER( doubled1b )      /* (c) 2025 La Casa De Ruivo / Neo Byte Force */
-  DRIVER( doubled1c )      /* (c) 2025 La Casa De Ruivo / Neo Byte Force */
-  DRIVER( doubled1d )      /* (c) 2025 La Casa De Ruivo / Neo Byte Force */
-  DRIVER( doubled1e )      /* (c) 2025 La Casa De Ruivo / Neo Byte Force */
-	
+	DRIVER( lasthope )	/* (c) 2005 NG:DEV.TEAM */
+	DRIVER( knightsch )	/* (c) 2014 Neobitz */
+	DRIVER( xeno )	/* (c) 2019 Bitmap Bureau */
+	DRIVER( hypernoid )	/* 2021 M.Priewe */
+	DRIVER( teot )	/* 2022 Ozzy Ouzo */
+	DRIVER( cyborgforce )	/* (c) 2023 Neo Byte Force Ltd */
+	DRIVER( captainbarrel )	/* (c) 2024 Neo Byte Force Ltd */
+	DRIVER( gladmort )	/* (c) 2024 Pixelheart / ChipsOnSteroids */
+	DRIVER( doubled1 )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1a )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1b )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1c )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1d )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1e )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+
 	/* SemiCom 68020 based hardware */
 	DRIVER( baryon )    /* (c) 1997 SemiCom / Tirano */
 	DRIVER( cutefght )  /* (c) 1998 SemiCom */

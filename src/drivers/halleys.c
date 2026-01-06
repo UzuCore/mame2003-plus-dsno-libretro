@@ -2206,7 +2206,7 @@ static int init_common(void)
 
 
 	/* allocate memory for hardware collision list*/
-	if (!(collision_list = auto_malloc(MAX_SPRITES))) return(0);
+	if (!(collision_list = auto_malloc(MAX_SPRITES))) return(0);;
 
 
 	/* decrypt main program ROM*/
