@@ -857,6 +857,7 @@ const struct GameDriver *test_drivers[] =
 	DRIVER( spnchout )	/* (c) 1984 */
 	DRIVER( spnchotj )	/* (c) 1984 (Japan) */
 	DRIVER( armwrest )	/* (c) 1985 */
+	DRIVER( jammin )	  /* (c) 1985 Atari Prototype */
 
 	/* Nintendo Playchoice 10 games */
 	DRIVER( pc_tenis )	/* (c) 1983 Nintendo */
@@ -4789,6 +4790,7 @@ BOMULEUL CHAJARA SEGA ST-V  1997/04/11
 	DRIVER( shimpact )	/* (c) 1991 Midway */
 	DRIVER( shimpacp )	/* (c) 1991 Midway */
 	DRIVER( strkforc )	/* (c) 1991 Midway */
+	DRIVER( saurnfrnt )	/* (c) 1991 Williams */
 	DRIVER( mk )		/* (c) 1992 Midway */
 	DRIVER( mkr4 )		/* (c) 1992 Midway */
 	DRIVER( mkprot9 )	/* (c) 1992 Midway */
@@ -5909,6 +5911,7 @@ Other Sun games
 	/* the four digits number is the game ID stored at address 0x0108 of the program ROM */
 	/* info on prototypes taken from http://www.members.tripod.com/fresa/proto/puzzle.htm */
 	DRIVER( nam1975 )	/* 0001 (c) 1990 SNK */
+	DRIVER( nam1975k )	/* 0001 (c) 2026 (Korean Translation) SNK */
 	DRIVER( bstars )	/* 0002 (c) 1990 SNK */
 	DRIVER( bstarsh )	/* 0002 (c) 1990 SNK */
 	DRIVER( tpgolf )	/* 0003 (c) 1990 SNK */
@@ -6104,6 +6107,7 @@ Other Sun games
 	DRIVER( magdrop2 )	/* 0221 (c) 1996 Data East Corporation */
 	DRIVER( samsho4 )	/* 0222 (c) 1996 SNK */
 	DRIVER( samsho4k )	/* 0222 (c) 1996 SNK */
+	DRIVER( samsho4kr )	/* 0222 (c) 2026 (Korean Translation) SNK */
 	DRIVER( samsho4uh )	/* 0222 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( rbffspec )	/* 0223 (c) 1996 SNK */
 	DRIVER( rbffspeck )	/* 0223 (c) 1996 SNK */
@@ -6244,9 +6248,16 @@ Other Sun games
 	DRIVER( knightsch )	/* (c) 2014 Neobitz */
 	DRIVER( xeno )	/* (c) 2019 Bitmap Bureau */
 	DRIVER( hypernoid )	/* 2021 M.Priewe */
+	DRIVER( teot )	/* 2022 Ozzy Ouzo */
 	DRIVER( cyborgforce )	/* (c) 2023 Neo Byte Force Ltd */
 	DRIVER( captainbarrel )	/* (c) 2024 Neo Byte Force Ltd */
 	DRIVER( gladmort )	/* (c) 2024 Pixelheart / ChipsOnSteroids */
+	DRIVER( doubled1 )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1a )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1b )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1c )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1d )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
+	DRIVER( doubled1e )	/* (c) 2025 La Casa De Ruivo / Neo Byte Force */
 
 	/* SemiCom 68020 based hardware */
 	DRIVER( baryon )    /* (c) 1997 SemiCom / Tirano */
