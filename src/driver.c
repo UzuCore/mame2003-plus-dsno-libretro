@@ -6021,6 +6021,7 @@ Other Sun games
 	DRIVER( samsho2 )	/* 0063 (c) 1994 SNK */
 	DRIVER( samsho2k )	/* 0063 (c) 1994 SNK */
 	DRIVER( samsho2ka )	/* 0063 (c) 1994 SNK */
+	DRIVER( samsho2kr )	/* 0063 (c) 2026 (Korean Translation) SNK */
 	DRIVER( samsho2uh )	/* 0063 (c) 2024 (AES Uncensored Hack) SNK */
 	DRIVER( wh2j )		/* 0064 (c) 1994 ADK / SNK */
 	DRIVER( wjammers )	/* 0065 (c) 1994 Data East Corporation */
